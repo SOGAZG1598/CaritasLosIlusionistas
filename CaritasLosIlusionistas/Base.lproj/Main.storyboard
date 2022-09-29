@@ -331,7 +331,7 @@
                                 <rect key="frame" x="86" y="533" width="203" height="31"/>
                                 <color key="tintColor" name="CelesteCaritas"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Crear Usuario"/>
+                                <buttonConfiguration key="configuration" style="filled" title="2do Paso Registro"/>
                                 <connections>
                                     <action selector="registroPrimeroAccion:" destination="ZMJ-QM-kb8" eventType="touchUpInside" id="Lmr-PS-vyD"/>
                                 </connections>
@@ -373,16 +373,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-S8-QW9">
-                                <rect key="frame" x="66" y="202" width="47" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondopb" translatesAutoresizingMaskIntoConstraints="NO" id="459-Oy-tpd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2do Paso  Registro de Administrador" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-Pd-orW">
+                                <rect key="frame" x="25" y="44" width="278" height="50.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V49-eh-GZ7">
+                                <rect key="frame" x="86" y="204" width="203" height="31"/>
+                                <color key="tintColor" name="CelesteCaritas"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Crear Usuario"/>
+                                <connections>
+                                    <action selector="registroPrimeroAccion:" destination="ZMJ-QM-kb8" eventType="touchUpInside" id="mBk-06-TtW"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="W60-J5-6yK">
+                                <rect key="frame" x="25" y="119.5" width="325" height="59.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departamento:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ear-UR-dIF">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="20.5"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del departamento al que pertenece" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsD-3j-ix1">
+                                        <rect key="frame" x="0.0" y="25.5" width="325" height="34"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9YL-zg-WeA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W60-J5-6yK" firstAttribute="leading" secondItem="9YL-zg-WeA" secondAttribute="leading" constant="25" id="1Eg-uN-KBv"/>
+                            <constraint firstItem="9YL-zg-WeA" firstAttribute="trailing" secondItem="W60-J5-6yK" secondAttribute="trailing" constant="25" id="2PL-t3-ePH"/>
+                            <constraint firstItem="V49-eh-GZ7" firstAttribute="leading" secondItem="9YL-zg-WeA" secondAttribute="leading" constant="86" id="8gs-xm-KE0"/>
+                            <constraint firstItem="NRh-Pd-orW" firstAttribute="leading" secondItem="9YL-zg-WeA" secondAttribute="leading" constant="25" id="JEJ-cI-4s7"/>
+                            <constraint firstItem="W60-J5-6yK" firstAttribute="top" secondItem="NRh-Pd-orW" secondAttribute="bottom" constant="25" id="Xkc-zC-TtQ"/>
+                            <constraint firstItem="NRh-Pd-orW" firstAttribute="top" secondItem="9YL-zg-WeA" secondAttribute="top" constant="44" id="s9v-co-hdS"/>
+                            <constraint firstItem="9YL-zg-WeA" firstAttribute="trailing" secondItem="NRh-Pd-orW" secondAttribute="trailing" constant="72" id="sot-rw-gzA"/>
+                            <constraint firstItem="V49-eh-GZ7" firstAttribute="top" secondItem="W60-J5-6yK" secondAttribute="bottom" constant="25" id="xzb-hi-bI5"/>
+                            <constraint firstItem="9YL-zg-WeA" firstAttribute="trailing" secondItem="V49-eh-GZ7" secondAttribute="trailing" constant="86" id="zIr-RQ-nZh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCq-SF-gJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -397,16 +437,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orK-MH-gq6">
-                                <rect key="frame" x="151" y="267" width="56" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondopb" translatesAutoresizingMaskIntoConstraints="NO" id="u4g-Tl-y5l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-pl-DGK">
+                                <rect key="frame" x="86" y="416" width="203" height="31"/>
+                                <color key="tintColor" name="CelesteCaritas"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Crear Usuario"/>
+                                <connections>
+                                    <action selector="registroPrimeroAccion:" destination="ZMJ-QM-kb8" eventType="touchUpInside" id="okM-1R-0C5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2do Paso  Registro de Usuario" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-d5-zRU">
+                                <rect key="frame" x="25" y="44" width="221" height="50.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mK1-Z4-yxH">
+                                <rect key="frame" x="25" y="118.5" width="325" height="272.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curso de Inducción:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJV-wT-Vf2">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="20.5"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9yl-UJ-8sz">
+                                        <rect key="frame" x="0.0" y="25.5" width="325" height="32"/>
+                                        <segments>
+                                            <segment title="Sí"/>
+                                            <segment title="No"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocupación:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tim-R3-4OZ">
+                                        <rect key="frame" x="0.0" y="61.5" width="325" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jyr-JC-Xti">
+                                        <rect key="frame" x="0.0" y="83.5" width="325" height="32"/>
+                                        <segments>
+                                            <segment title="Trabajo"/>
+                                            <segment title="Estudio"/>
+                                            <segment title="Otro"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del Lugar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-OG-C4b">
+                                        <rect key="frame" x="0.0" y="119.5" width="325" height="34"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolaridad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPw-5k-Keo">
+                                        <rect key="frame" x="0.0" y="158.5" width="325" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XVy-nq-Cda">
+                                        <rect key="frame" x="0.0" y="180.5" width="325" height="32"/>
+                                        <segments>
+                                            <segment title="Basica"/>
+                                            <segment title="Superior"/>
+                                            <segment title="Media Superior"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domicilio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLJ-VZ-ZhT">
+                                        <rect key="frame" x="0.0" y="216.5" width="325" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calle. Número. Colonia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEv-Y0-LQQ">
+                                        <rect key="frame" x="0.0" y="238.5" width="325" height="34"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="33m-Wl-IL3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XYi-pl-DGK" firstAttribute="top" secondItem="mK1-Z4-yxH" secondAttribute="bottom" constant="25" id="GQT-ib-ZsB"/>
+                            <constraint firstItem="BlX-d5-zRU" firstAttribute="top" secondItem="33m-Wl-IL3" secondAttribute="top" constant="44" id="Jqd-eR-FrA"/>
+                            <constraint firstItem="33m-Wl-IL3" firstAttribute="trailing" secondItem="BlX-d5-zRU" secondAttribute="trailing" constant="129" id="SrP-ZE-A1m"/>
+                            <constraint firstItem="33m-Wl-IL3" firstAttribute="trailing" secondItem="mK1-Z4-yxH" secondAttribute="trailing" constant="25" id="VZT-an-2Li"/>
+                            <constraint firstItem="BlX-d5-zRU" firstAttribute="leading" secondItem="33m-Wl-IL3" secondAttribute="leading" constant="25" id="Yku-mN-SVC"/>
+                            <constraint firstItem="33m-Wl-IL3" firstAttribute="trailing" secondItem="XYi-pl-DGK" secondAttribute="trailing" constant="86" id="ge3-Rm-KMY"/>
+                            <constraint firstItem="mK1-Z4-yxH" firstAttribute="leading" secondItem="33m-Wl-IL3" secondAttribute="leading" constant="25" id="plh-ZA-n2h"/>
+                            <constraint firstItem="mK1-Z4-yxH" firstAttribute="top" secondItem="BlX-d5-zRU" secondAttribute="bottom" constant="24" id="rxS-Kc-xlk"/>
+                            <constraint firstItem="XYi-pl-DGK" firstAttribute="leading" secondItem="33m-Wl-IL3" secondAttribute="leading" constant="86" id="vsY-EF-uy8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMb-Nt-zPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -589,6 +716,7 @@
         <image name="DP ejemplo" width="756" height="702"/>
         <image name="PruebaWWP3" width="1500" height="2668"/>
         <image name="TemplatePerfil" width="1500" height="2668"/>
+        <image name="fondopb" width="1500" height="2668"/>
         <image name="logoCaritas" width="318" height="158"/>
         <image name="logoCaritas-removebg-preview" width="318" height="158"/>
         <image name="menucard.fill" catalog="system" width="106" height="128"/>
