@@ -16,6 +16,15 @@
 		2184E3BA28E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3B928E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.swift */; };
 		2184E3C428E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3C328E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.swift */; };
 		2184E3C628E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3C528E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift */; };
+		2184E3D328E51B8B00E7E3E3 /* perfilUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3D228E51B8B00E7E3E3 /* perfilUsuarioViewController.swift */; };
+		2184E3D528E51B9600E7E3E3 /* perfilAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3D428E51B9600E7E3E3 /* perfilAdminViewController.swift */; };
+		2184E3DC28E51C1600E7E3E3 /* voluntariosAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3DB28E51C1600E7E3E3 /* voluntariosAdminTableViewController.swift */; };
+		2184E3DE28E51C2200E7E3E3 /* programasAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3DD28E51C2200E7E3E3 /* programasAdminTableViewController.swift */; };
+		2184E3E128E51C4400E7E3E3 /* programasUsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E028E51C4400E7E3E3 /* programasUsuarioTableViewController.swift */; };
+		2184E3E328E51CC600E7E3E3 /* registroGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E228E51CC600E7E3E3 /* registroGeneralViewController.swift */; };
+		2184E3E628E51CD900E7E3E3 /* registroUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E528E51CD900E7E3E3 /* registroUsuarioViewController.swift */; };
+		2184E3E828E51CDE00E7E3E3 /* registroAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */; };
+		2184E3EA28E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		2184E3BF28E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaritasLosIlusionistasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2184E3C328E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritasLosIlusionistasUITests.swift; sourceTree = "<group>"; };
 		2184E3C528E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritasLosIlusionistasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2184E3D228E51B8B00E7E3E3 /* perfilUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfilUsuarioViewController.swift; sourceTree = "<group>"; };
+		2184E3D428E51B9600E7E3E3 /* perfilAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfilAdminViewController.swift; sourceTree = "<group>"; };
+		2184E3DB28E51C1600E7E3E3 /* voluntariosAdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voluntariosAdminTableViewController.swift; sourceTree = "<group>"; };
+		2184E3DD28E51C2200E7E3E3 /* programasAdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programasAdminTableViewController.swift; sourceTree = "<group>"; };
+		2184E3E028E51C4400E7E3E3 /* programasUsuarioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programasUsuarioTableViewController.swift; sourceTree = "<group>"; };
+		2184E3E228E51CC600E7E3E3 /* registroGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroGeneralViewController.swift; sourceTree = "<group>"; };
+		2184E3E528E51CD900E7E3E3 /* registroUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroUsuarioViewController.swift; sourceTree = "<group>"; };
+		2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroAdminViewController.swift; sourceTree = "<group>"; };
+		2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleProgramasUsuarioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +117,17 @@
 		2184E3A128E51B5C00E7E3E3 /* CaritasLosIlusionistas */ = {
 			isa = PBXGroup;
 			children = (
+				2184E3DA28E51BDD00E7E3E3 /* admin */,
 				2184E3A228E51B5C00E7E3E3 /* AppDelegate.swift */,
 				2184E3A428E51B5C00E7E3E3 /* SceneDelegate.swift */,
 				2184E3A628E51B5C00E7E3E3 /* ViewController.swift */,
 				2184E3A828E51B5C00E7E3E3 /* Main.storyboard */,
+				2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */,
+				2184E3E428E51CCD00E7E3E3 /* registro */,
 				2184E3AB28E51B5D00E7E3E3 /* Assets.xcassets */,
 				2184E3AD28E51B5D00E7E3E3 /* LaunchScreen.storyboard */,
 				2184E3B028E51B5D00E7E3E3 /* Info.plist */,
+				2184E3DF28E51C3100E7E3E3 /* usuario */,
 			);
 			path = CaritasLosIlusionistas;
 			sourceTree = "<group>";
@@ -125,6 +147,35 @@
 				2184E3C528E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift */,
 			);
 			path = CaritasLosIlusionistasUITests;
+			sourceTree = "<group>";
+		};
+		2184E3DA28E51BDD00E7E3E3 /* admin */ = {
+			isa = PBXGroup;
+			children = (
+				2184E3D428E51B9600E7E3E3 /* perfilAdminViewController.swift */,
+				2184E3DB28E51C1600E7E3E3 /* voluntariosAdminTableViewController.swift */,
+				2184E3DD28E51C2200E7E3E3 /* programasAdminTableViewController.swift */,
+			);
+			path = admin;
+			sourceTree = "<group>";
+		};
+		2184E3DF28E51C3100E7E3E3 /* usuario */ = {
+			isa = PBXGroup;
+			children = (
+				2184E3E028E51C4400E7E3E3 /* programasUsuarioTableViewController.swift */,
+				2184E3D228E51B8B00E7E3E3 /* perfilUsuarioViewController.swift */,
+			);
+			path = usuario;
+			sourceTree = "<group>";
+		};
+		2184E3E428E51CCD00E7E3E3 /* registro */ = {
+			isa = PBXGroup;
+			children = (
+				2184E3E528E51CD900E7E3E3 /* registroUsuarioViewController.swift */,
+				2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */,
+				2184E3E228E51CC600E7E3E3 /* registroGeneralViewController.swift */,
+			);
+			path = registro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +309,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2184E3DC28E51C1600E7E3E3 /* voluntariosAdminTableViewController.swift in Sources */,
+				2184E3D528E51B9600E7E3E3 /* perfilAdminViewController.swift in Sources */,
+				2184E3DE28E51C2200E7E3E3 /* programasAdminTableViewController.swift in Sources */,
+				2184E3E328E51CC600E7E3E3 /* registroGeneralViewController.swift in Sources */,
+				2184E3E628E51CD900E7E3E3 /* registroUsuarioViewController.swift in Sources */,
 				2184E3A728E51B5C00E7E3E3 /* ViewController.swift in Sources */,
 				2184E3A328E51B5C00E7E3E3 /* AppDelegate.swift in Sources */,
 				2184E3A528E51B5C00E7E3E3 /* SceneDelegate.swift in Sources */,
+				2184E3EA28E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift in Sources */,
+				2184E3D328E51B8B00E7E3E3 /* perfilUsuarioViewController.swift in Sources */,
+				2184E3E128E51C4400E7E3E3 /* programasUsuarioTableViewController.swift in Sources */,
+				2184E3E828E51CDE00E7E3E3 /* registroAdminViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
