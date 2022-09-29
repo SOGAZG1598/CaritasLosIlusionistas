@@ -15,7 +15,14 @@ class registroGeneralViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func registroPrimeroAccion(_ sender: UIButton) {
+        if {
+            self.performSegue(withIdentifier: "adminPrincipalSegue", sender: nil)
+        }else{
+            self.performSegue(withIdentifier: "usuarioPrincipalSegue", sender: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -54,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PruebaWWP2" translatesAutoresizingMaskIntoConstraints="NO" id="oZp-BI-3Or">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PruebaWWP3" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4Y-Jd-Crm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoCaritas-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="neD-Cb-7ne">
@@ -104,6 +104,9 @@
                                                 <color key="backgroundColor" name="CelesteCaritas"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginAccion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrn-0v-hJf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbZ-0L-NzL">
                                         <rect key="frame" x="0.0" y="280" width="285" height="31"/>
@@ -122,24 +125,30 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.10602418333292007" green="0.24295592308044434" blue="0.37633991241455078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tLo-l6-Uis" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="24I-Xg-p0C"/>
-                            <constraint firstItem="oZp-BI-3Or" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="889-nb-Hpy"/>
-                            <constraint firstItem="oZp-BI-3Or" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ph2-jx-7EC"/>
+                            <constraint firstAttribute="bottom" secondItem="L4Y-Jd-Crm" secondAttribute="bottom" id="IVf-k5-nUi"/>
+                            <constraint firstItem="L4Y-Jd-Crm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PDs-2B-N98"/>
+                            <constraint firstItem="L4Y-Jd-Crm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="S18-4j-pqT"/>
                             <constraint firstItem="tLo-l6-Uis" firstAttribute="top" secondItem="neD-Cb-7ne" secondAttribute="bottom" constant="50" id="SEX-Tg-6BW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tLo-l6-Uis" secondAttribute="trailing" constant="45" id="TiQ-IG-P9w"/>
-                            <constraint firstItem="oZp-BI-3Or" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="We2-1b-Ssu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="neD-Cb-7ne" secondAttribute="trailing" constant="60" id="deE-nU-Dwg"/>
+                            <constraint firstItem="L4Y-Jd-Crm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gfN-3F-1Tl"/>
                             <constraint firstItem="neD-Cb-7ne" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="mFF-fn-bFz"/>
-                            <constraint firstItem="oZp-BI-3Or" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rfk-xr-f2T"/>
                             <constraint firstItem="neD-Cb-7ne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="zkp-xy-WJn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbEmail" destination="HT9-dO-d3H" id="ftR-tJ-U9s"/>
+                        <outlet property="lbPass" destination="o7Z-sJ-iN2" id="Uht-og-NJD"/>
+                        <segue destination="bMC-sY-3gI" kind="presentation" identifier="usuarioPrincipalSegue" modalPresentationStyle="fullScreen" id="Chu-Fz-ixW"/>
+                        <segue destination="J94-m8-ouu" kind="presentation" identifier="adminPrincipalSegue" modalPresentationStyle="fullScreen" id="kO8-9y-ZEY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2472.8000000000002" y="-1043.0284857571214"/>
+            <point key="canvasLocation" x="2132" y="-1159"/>
         </scene>
         <!--Registro General View Controller-->
         <scene sceneID="AcC-ed-8UJ">
@@ -259,7 +268,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Crear Usuario"/>
                                 <connections>
-                                    <segue destination="bMC-sY-3gI" kind="presentation" modalPresentationStyle="fullScreen" id="PJJ-w8-gkM"/>
+                                    <action selector="registroPrimeroAccion:" destination="ZMJ-QM-kb8" eventType="touchUpInside" id="Lmr-PS-vyD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -281,6 +290,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pFk-4l-BhX"/>
+                    <connections>
+                        <segue destination="HwA-LC-ZoL" kind="presentation" identifier="usuarioRegistroSegue" modalPresentationStyle="fullScreen" id="AE4-d4-1ZB"/>
+                        <segue destination="khA-JW-we4" kind="presentation" identifier="adminRegistroSegue" modalPresentationStyle="fullScreen" id="Fe2-ZX-tnD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7S-jD-lhh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,7 +378,7 @@
             </objects>
             <point key="canvasLocation" x="71" y="1186"/>
         </scene>
-        <!--Item 1-->
+        <!--Perfil-->
         <scene sceneID="6jT-Yx-fsO">
             <objects>
                 <viewController id="8LG-C4-23Z" customClass="perfilAdminViewController" customModule="CaritasLosIlusionistas" customModuleProvider="target" sceneMemberID="viewController">
@@ -375,7 +388,7 @@
                         <viewLayoutGuide key="safeArea" id="2Pt-lU-srm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="person.fill" catalog="system" id="2Kh-i1-6M6"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" selectedImage="person.fill" id="2Kh-i1-6M6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4v-2h-oKy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,11 +481,11 @@
             </objects>
             <point key="canvasLocation" x="-868" y="-187.55622188905548"/>
         </scene>
-        <!--Item-->
+        <!--Programas-->
         <scene sceneID="bvc-YP-FZi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3TO-RG-oTg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="menucard.fill" catalog="system" id="5nj-pO-Xz9"/>
+                    <tabBarItem key="tabBarItem" title="Programas" image="menucard.fill" catalog="system" selectedImage="menucard.fill" id="5nj-pO-Xz9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WDm-b1-gDf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -489,7 +502,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PruebaWWP2" width="1500" height="2668"/>
+        <image name="PruebaWWP3" width="1500" height="2668"/>
         <image name="logoCaritas" width="318" height="158"/>
         <image name="logoCaritas-removebg-preview" width="318" height="158"/>
         <image name="menucard.fill" catalog="system" width="106" height="128"/>
