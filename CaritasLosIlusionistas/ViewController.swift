@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginAccion(_ sender: UIButton) {
-        if lbEmail.text! == "1"{
+        let emailusad = lbEmail.text!
+        if emailusad.contains("@caritas.mx"){
             self.performSegue(withIdentifier: "adminPrincipalSegue", sender: nil)
         }else{
             self.performSegue(withIdentifier: "usuarioPrincipalSegue", sender: nil)

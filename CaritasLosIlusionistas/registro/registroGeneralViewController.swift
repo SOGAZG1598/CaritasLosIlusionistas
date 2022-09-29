@@ -9,6 +9,7 @@ import UIKit
 
 class registroGeneralViewController: UIViewController {
 
+    @IBOutlet weak var lbEmailRegistro: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,10 +17,11 @@ class registroGeneralViewController: UIViewController {
     }
     
     @IBAction func registroPrimeroAccion(_ sender: UIButton) {
-        if {
-            self.performSegue(withIdentifier: "adminPrincipalSegue", sender: nil)
+        let emailusad = lbEmailRegistro.text!
+        if emailusad.contains("@caritas.mx"){
+            self.performSegue(withIdentifier: "adminRegistroSegue", sender: nil)
         }else{
-            self.performSegue(withIdentifier: "usuarioPrincipalSegue", sender: nil)
+            self.performSegue(withIdentifier: "usuarioRegistroSegue", sender: nil)
         }
     }
     
