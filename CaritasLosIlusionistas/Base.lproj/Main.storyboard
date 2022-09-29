@@ -16,14 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="qkz-ue-29y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TemplatePerfil" translatesAutoresizingMaskIntoConstraints="NO" id="o6B-mg-CwV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horas Totales" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buz-mN-Flb">
+                                <rect key="frame" x="80" y="409" width="215" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                <color key="textColor" name="GrisCaritas"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XU-1g-v0S">
+                                <rect key="frame" x="162" y="474" width="51.5" height="55"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="46"/>
+                                <color key="textColor" name="AzulCaritas"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesus Eduardo Martinez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-eY-wKw">
+                                <rect key="frame" x="30" y="334" width="320" height="32.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" name="AzulCaritas"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prm-uL-Odp">
+                                <rect key="frame" x="237" y="271" width="104" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="prm-uL-Odp" secondAttribute="height" multiplier="104:57" id="gd1-1F-CiG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Editar" subtitle="" cornerStyle="capsule" titleAlignment="center">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="MoradoCaritas"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DP ejemplo" translatesAutoresizingMaskIntoConstraints="NO" id="QBd-7A-zTL">
+                                <rect key="frame" x="37" y="163" width="157" height="163"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QBd-7A-zTL" secondAttribute="height" multiplier="157:163" id="8lx-Q4-ehn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="m7s-aw-eSv"/>
-                        <color key="backgroundColor" name="GrisCaritas"/>
+                        <color key="backgroundColor" name="GrisLightCaritas"/>
+                        <constraints>
+                            <constraint firstItem="m7s-aw-eSv" firstAttribute="trailing" secondItem="buz-mN-Flb" secondAttribute="trailing" constant="80" id="3Yz-S6-EAm"/>
+                            <constraint firstItem="buz-mN-Flb" firstAttribute="leading" secondItem="m7s-aw-eSv" secondAttribute="leading" constant="80" id="3ZN-I9-Ogj"/>
+                            <constraint firstItem="m7s-aw-eSv" firstAttribute="trailing" secondItem="j6U-eY-wKw" secondAttribute="trailing" constant="25" id="GHv-uM-TGi"/>
+                            <constraint firstItem="j6U-eY-wKw" firstAttribute="top" secondItem="QBd-7A-zTL" secondAttribute="bottom" constant="6" id="HtB-MJ-JuU"/>
+                            <constraint firstItem="m7s-aw-eSv" firstAttribute="bottom" secondItem="7XU-1g-v0S" secondAttribute="bottom" constant="89" id="Izu-xH-o3X"/>
+                            <constraint firstItem="m7s-aw-eSv" firstAttribute="trailing" secondItem="prm-uL-Odp" secondAttribute="trailing" constant="34" id="KhV-YT-ITk"/>
+                            <constraint firstItem="7XU-1g-v0S" firstAttribute="leading" secondItem="m7s-aw-eSv" secondAttribute="leading" constant="162" id="OFc-td-khT"/>
+                            <constraint firstItem="m7s-aw-eSv" firstAttribute="trailing" secondItem="prm-uL-Odp" secondAttribute="trailing" constant="34" id="P3g-UB-BcS"/>
+                            <constraint firstItem="prm-uL-Odp" firstAttribute="leading" secondItem="QBd-7A-zTL" secondAttribute="trailing" constant="43" id="PGM-hF-wTR"/>
+                            <constraint firstItem="j6U-eY-wKw" firstAttribute="top" secondItem="prm-uL-Odp" secondAttribute="bottom" constant="6" id="S7H-nw-BwW"/>
+                            <constraint firstItem="m7s-aw-eSv" firstAttribute="trailing" secondItem="7XU-1g-v0S" secondAttribute="trailing" constant="161.5" id="Whd-J6-i5F"/>
+                            <constraint firstItem="prm-uL-Odp" firstAttribute="leading" secondItem="QBd-7A-zTL" secondAttribute="trailing" constant="43" id="XNH-4g-IRU"/>
+                            <constraint firstItem="buz-mN-Flb" firstAttribute="top" secondItem="j6U-eY-wKw" secondAttribute="bottom" constant="42.5" id="Zo2-Ao-0yl"/>
+                            <constraint firstItem="QBd-7A-zTL" firstAttribute="top" secondItem="m7s-aw-eSv" secondAttribute="top" constant="165" id="dBv-gx-g5k"/>
+                            <constraint firstItem="prm-uL-Odp" firstAttribute="leading" secondItem="QBd-7A-zTL" secondAttribute="trailing" constant="43" id="dZa-cE-l1w"/>
+                            <constraint firstItem="7XU-1g-v0S" firstAttribute="top" secondItem="buz-mN-Flb" secondAttribute="bottom" constant="30" id="gp6-a9-COF"/>
+                            <constraint firstItem="prm-uL-Odp" firstAttribute="top" secondItem="m7s-aw-eSv" secondAttribute="top" constant="271" id="gv2-TW-ZAU"/>
+                            <constraint firstItem="QBd-7A-zTL" firstAttribute="leading" secondItem="m7s-aw-eSv" secondAttribute="leading" constant="37" id="hPT-tW-2kb"/>
+                            <constraint firstItem="j6U-eY-wKw" firstAttribute="leading" secondItem="m7s-aw-eSv" secondAttribute="leading" constant="30" id="hRJ-k9-NfO"/>
+                            <constraint firstItem="prm-uL-Odp" firstAttribute="top" secondItem="m7s-aw-eSv" secondAttribute="top" constant="271" id="jHn-yg-CNW"/>
+                            <constraint firstItem="j6U-eY-wKw" firstAttribute="top" secondItem="prm-uL-Odp" secondAttribute="bottom" constant="6" id="qio-78-WFO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" selectedImage="person.fill" id="F9S-Z0-64Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MW9-ix-4dF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-868" y="-928"/>
+            <point key="canvasLocation" x="-868" y="-928.78560719640188"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2Qa-0Z-dOQ">
@@ -521,11 +586,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DP ejemplo" width="756" height="702"/>
         <image name="PruebaWWP3" width="1500" height="2668"/>
+        <image name="TemplatePerfil" width="1500" height="2668"/>
         <image name="logoCaritas" width="318" height="158"/>
         <image name="logoCaritas-removebg-preview" width="318" height="158"/>
         <image name="menucard.fill" catalog="system" width="106" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="AzulCaritas">
+            <color red="0.0" green="0.23100000619888306" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="CelesteCaritas">
             <color red="0.0" green="0.56099998950958252" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -534,6 +604,9 @@
         </namedColor>
         <namedColor name="GrisLightCaritas">
             <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MoradoCaritas">
+            <color red="0.57300001382827759" green="0.33700001239776611" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NaranjaCaritas">
             <color red="0.93300002813339233" green="0.49399998784065247" blue="0.25499999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
