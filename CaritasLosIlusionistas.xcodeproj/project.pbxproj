@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2184E3A328E51B5C00E7E3E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3A228E51B5C00E7E3E3 /* AppDelegate.swift */; };
+		2184E3A528E51B5C00E7E3E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3A428E51B5C00E7E3E3 /* SceneDelegate.swift */; };
+		2184E3A728E51B5C00E7E3E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3A628E51B5C00E7E3E3 /* ViewController.swift */; };
+		2184E3AA28E51B5C00E7E3E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2184E3A828E51B5C00E7E3E3 /* Main.storyboard */; };
+		2184E3AC28E51B5D00E7E3E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2184E3AB28E51B5D00E7E3E3 /* Assets.xcassets */; };
+		2184E3AF28E51B5D00E7E3E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2184E3AD28E51B5D00E7E3E3 /* LaunchScreen.storyboard */; };
+		2184E3BA28E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3B928E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.swift */; };
+		2184E3C428E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3C328E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.swift */; };
+		2184E3C628E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3C528E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2184E3B628E51B5D00E7E3E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2184E39728E51B5C00E7E3E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2184E39E28E51B5C00E7E3E3;
+			remoteInfo = CaritasLosIlusionistas;
+		};
+		2184E3C028E51B5D00E7E3E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2184E39728E51B5C00E7E3E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2184E39E28E51B5C00E7E3E3;
+			remoteInfo = CaritasLosIlusionistas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2184E39F28E51B5C00E7E3E3 /* CaritasLosIlusionistas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaritasLosIlusionistas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2184E3A228E51B5C00E7E3E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2184E3A428E51B5C00E7E3E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2184E3A628E51B5C00E7E3E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2184E3A928E51B5C00E7E3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2184E3AB28E51B5D00E7E3E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2184E3AE28E51B5D00E7E3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2184E3B028E51B5D00E7E3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2184E3B528E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaritasLosIlusionistasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2184E3B928E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritasLosIlusionistasTests.swift; sourceTree = "<group>"; };
+		2184E3BF28E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaritasLosIlusionistasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2184E3C328E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritasLosIlusionistasUITests.swift; sourceTree = "<group>"; };
+		2184E3C528E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaritasLosIlusionistasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2184E39C28E51B5C00E7E3E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2184E3B228E51B5D00E7E3E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2184E3BC28E51B5D00E7E3E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2184E39628E51B5C00E7E3E3 = {
+			isa = PBXGroup;
+			children = (
+				2184E3A128E51B5C00E7E3E3 /* CaritasLosIlusionistas */,
+				2184E3B828E51B5D00E7E3E3 /* CaritasLosIlusionistasTests */,
+				2184E3C228E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests */,
+				2184E3A028E51B5C00E7E3E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2184E3A028E51B5C00E7E3E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2184E39F28E51B5C00E7E3E3 /* CaritasLosIlusionistas.app */,
+				2184E3B528E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.xctest */,
+				2184E3BF28E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2184E3A128E51B5C00E7E3E3 /* CaritasLosIlusionistas */ = {
+			isa = PBXGroup;
+			children = (
+				2184E3A228E51B5C00E7E3E3 /* AppDelegate.swift */,
+				2184E3A428E51B5C00E7E3E3 /* SceneDelegate.swift */,
+				2184E3A628E51B5C00E7E3E3 /* ViewController.swift */,
+				2184E3A828E51B5C00E7E3E3 /* Main.storyboard */,
+				2184E3AB28E51B5D00E7E3E3 /* Assets.xcassets */,
+				2184E3AD28E51B5D00E7E3E3 /* LaunchScreen.storyboard */,
+				2184E3B028E51B5D00E7E3E3 /* Info.plist */,
+			);
+			path = CaritasLosIlusionistas;
+			sourceTree = "<group>";
+		};
+		2184E3B828E51B5D00E7E3E3 /* CaritasLosIlusionistasTests */ = {
+			isa = PBXGroup;
+			children = (
+				2184E3B928E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.swift */,
+			);
+			path = CaritasLosIlusionistasTests;
+			sourceTree = "<group>";
+		};
+		2184E3C228E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2184E3C328E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.swift */,
+				2184E3C528E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift */,
+			);
+			path = CaritasLosIlusionistasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2184E39E28E51B5C00E7E3E3 /* CaritasLosIlusionistas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2184E3C928E51B5D00E7E3E3 /* Build configuration list for PBXNativeTarget "CaritasLosIlusionistas" */;
+			buildPhases = (
+				2184E39B28E51B5C00E7E3E3 /* Sources */,
+				2184E39C28E51B5C00E7E3E3 /* Frameworks */,
+				2184E39D28E51B5C00E7E3E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaritasLosIlusionistas;
+			productName = CaritasLosIlusionistas;
+			productReference = 2184E39F28E51B5C00E7E3E3 /* CaritasLosIlusionistas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2184E3B428E51B5D00E7E3E3 /* CaritasLosIlusionistasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2184E3CC28E51B5D00E7E3E3 /* Build configuration list for PBXNativeTarget "CaritasLosIlusionistasTests" */;
+			buildPhases = (
+				2184E3B128E51B5D00E7E3E3 /* Sources */,
+				2184E3B228E51B5D00E7E3E3 /* Frameworks */,
+				2184E3B328E51B5D00E7E3E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2184E3B728E51B5D00E7E3E3 /* PBXTargetDependency */,
+			);
+			name = CaritasLosIlusionistasTests;
+			productName = CaritasLosIlusionistasTests;
+			productReference = 2184E3B528E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2184E3BE28E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2184E3CF28E51B5D00E7E3E3 /* Build configuration list for PBXNativeTarget "CaritasLosIlusionistasUITests" */;
+			buildPhases = (
+				2184E3BB28E51B5D00E7E3E3 /* Sources */,
+				2184E3BC28E51B5D00E7E3E3 /* Frameworks */,
+				2184E3BD28E51B5D00E7E3E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2184E3C128E51B5D00E7E3E3 /* PBXTargetDependency */,
+			);
+			name = CaritasLosIlusionistasUITests;
+			productName = CaritasLosIlusionistasUITests;
+			productReference = 2184E3BF28E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2184E39728E51B5C00E7E3E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					2184E39E28E51B5C00E7E3E3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					2184E3B428E51B5D00E7E3E3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2184E39E28E51B5C00E7E3E3;
+					};
+					2184E3BE28E51B5D00E7E3E3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2184E39E28E51B5C00E7E3E3;
+					};
+				};
+			};
+			buildConfigurationList = 2184E39A28E51B5C00E7E3E3 /* Build configuration list for PBXProject "CaritasLosIlusionistas" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2184E39628E51B5C00E7E3E3;
+			productRefGroup = 2184E3A028E51B5C00E7E3E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2184E39E28E51B5C00E7E3E3 /* CaritasLosIlusionistas */,
+				2184E3B428E51B5D00E7E3E3 /* CaritasLosIlusionistasTests */,
+				2184E3BE28E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2184E39D28E51B5C00E7E3E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2184E3AF28E51B5D00E7E3E3 /* LaunchScreen.storyboard in Resources */,
+				2184E3AC28E51B5D00E7E3E3 /* Assets.xcassets in Resources */,
+				2184E3AA28E51B5C00E7E3E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2184E3B328E51B5D00E7E3E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2184E3BD28E51B5D00E7E3E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2184E39B28E51B5C00E7E3E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2184E3A728E51B5C00E7E3E3 /* ViewController.swift in Sources */,
+				2184E3A328E51B5C00E7E3E3 /* AppDelegate.swift in Sources */,
+				2184E3A528E51B5C00E7E3E3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2184E3B128E51B5D00E7E3E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2184E3BA28E51B5D00E7E3E3 /* CaritasLosIlusionistasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2184E3BB28E51B5D00E7E3E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2184E3C628E51B5D00E7E3E3 /* CaritasLosIlusionistasUITestsLaunchTests.swift in Sources */,
+				2184E3C428E51B5D00E7E3E3 /* CaritasLosIlusionistasUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2184E3B728E51B5D00E7E3E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2184E39E28E51B5C00E7E3E3 /* CaritasLosIlusionistas */;
+			targetProxy = 2184E3B628E51B5D00E7E3E3 /* PBXContainerItemProxy */;
+		};
+		2184E3C128E51B5D00E7E3E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2184E39E28E51B5C00E7E3E3 /* CaritasLosIlusionistas */;
+			targetProxy = 2184E3C028E51B5D00E7E3E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2184E3A828E51B5C00E7E3E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2184E3A928E51B5C00E7E3E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2184E3AD28E51B5D00E7E3E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2184E3AE28E51B5D00E7E3E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2184E3C728E51B5D00E7E3E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2184E3C828E51B5D00E7E3E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2184E3CA28E51B5D00E7E3E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CHNNPCP83M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaritasLosIlusionistas/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tec.mx.CaritasLosIlusionistas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2184E3CB28E51B5D00E7E3E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CHNNPCP83M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaritasLosIlusionistas/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tec.mx.CaritasLosIlusionistas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2184E3CD28E51B5D00E7E3E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CHNNPCP83M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tec.mx.CaritasLosIlusionistasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaritasLosIlusionistas.app/CaritasLosIlusionistas";
+			};
+			name = Debug;
+		};
+		2184E3CE28E51B5D00E7E3E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CHNNPCP83M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tec.mx.CaritasLosIlusionistasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaritasLosIlusionistas.app/CaritasLosIlusionistas";
+			};
+			name = Release;
+		};
+		2184E3D028E51B5D00E7E3E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CHNNPCP83M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tec.mx.CaritasLosIlusionistasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CaritasLosIlusionistas;
+			};
+			name = Debug;
+		};
+		2184E3D128E51B5D00E7E3E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CHNNPCP83M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tec.mx.CaritasLosIlusionistasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CaritasLosIlusionistas;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2184E39A28E51B5C00E7E3E3 /* Build configuration list for PBXProject "CaritasLosIlusionistas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2184E3C728E51B5D00E7E3E3 /* Debug */,
+				2184E3C828E51B5D00E7E3E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2184E3C928E51B5D00E7E3E3 /* Build configuration list for PBXNativeTarget "CaritasLosIlusionistas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2184E3CA28E51B5D00E7E3E3 /* Debug */,
+				2184E3CB28E51B5D00E7E3E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2184E3CC28E51B5D00E7E3E3 /* Build configuration list for PBXNativeTarget "CaritasLosIlusionistasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2184E3CD28E51B5D00E7E3E3 /* Debug */,
+				2184E3CE28E51B5D00E7E3E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2184E3CF28E51B5D00E7E3E3 /* Build configuration list for PBXNativeTarget "CaritasLosIlusionistasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2184E3D028E51B5D00E7E3E3 /* Debug */,
+				2184E3D128E51B5D00E7E3E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2184E39728E51B5C00E7E3E3 /* Project object */;
+}
