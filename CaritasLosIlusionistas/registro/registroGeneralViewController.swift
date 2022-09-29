@@ -9,13 +9,22 @@ import UIKit
 
 class registroGeneralViewController: UIViewController {
 
+    @IBOutlet weak var lbEmailRegistro: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func registroPrimeroAccion(_ sender: UIButton) {
+        let emailusad = lbEmailRegistro.text!
+        if emailusad.contains("@caritas.mx"){
+            self.performSegue(withIdentifier: "adminRegistroSegue", sender: nil)
+        }else{
+            self.performSegue(withIdentifier: "usuarioRegistroSegue", sender: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
