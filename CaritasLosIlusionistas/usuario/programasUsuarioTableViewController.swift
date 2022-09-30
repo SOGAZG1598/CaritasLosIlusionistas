@@ -8,39 +8,50 @@
 import UIKit
 
 class programasUsuarioTableViewController: UITableViewController {
+    
+    
+    var programas = ["Banco de alimentos", "Prueba 2", "Prueba 3"]
 
+    @IBOutlet var programTableView: UITableView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Programas del usuario"
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        programTableView.delegate = self
+        programTableView.dataSource = self
+        programTableView.separatorStyle = .none
+        programTableView.showsVerticalScrollIndicator = false 
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return programas.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = programTableView.dequeueReusableCell(withIdentifier: "programCell", for: indexPath) as! ProgramasTVC
+        let programas = programas[indexPath.row]
+        
+        cell.programLbl.text = programas
+        cell.programasImgView.image = UIImage(named: programas)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -88,3 +99,5 @@ class programasUsuarioTableViewController: UITableViewController {
     */
 
 }
+
+

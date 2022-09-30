@@ -25,6 +25,7 @@
 		2184E3E628E51CD900E7E3E3 /* registroUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E528E51CD900E7E3E3 /* registroUsuarioViewController.swift */; };
 		2184E3E828E51CDE00E7E3E3 /* registroAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */; };
 		2184E3EA28E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */; };
+		2577103728E7748F00528FFC /* ProgramasTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2577103628E7748F00528FFC /* ProgramasTVC.swift */; };
 		25FDDE0228E520FD00B3C028 /* detalleProgramasAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FDDE0128E520FD00B3C028 /* detalleProgramasAdminViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		2184E3E528E51CD900E7E3E3 /* registroUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroUsuarioViewController.swift; sourceTree = "<group>"; };
 		2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroAdminViewController.swift; sourceTree = "<group>"; };
 		2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleProgramasUsuarioViewController.swift; sourceTree = "<group>"; };
+		2577103628E7748F00528FFC /* ProgramasTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramasTVC.swift; sourceTree = "<group>"; };
 		25FDDE0128E520FD00B3C028 /* detalleProgramasAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleProgramasAdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 				2184E3A428E51B5C00E7E3E3 /* SceneDelegate.swift */,
 				2184E3A628E51B5C00E7E3E3 /* ViewController.swift */,
 				2184E3A828E51B5C00E7E3E3 /* Main.storyboard */,
+				2577103628E7748F00528FFC /* ProgramasTVC.swift */,
 				25FDDE0128E520FD00B3C028 /* detalleProgramasAdminViewController.swift */,
 				2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */,
 				2184E3E428E51CCD00E7E3E3 /* registro */,
@@ -320,6 +323,7 @@
 				25FDDE0228E520FD00B3C028 /* detalleProgramasAdminViewController.swift in Sources */,
 				2184E3A728E51B5C00E7E3E3 /* ViewController.swift in Sources */,
 				2184E3A328E51B5C00E7E3E3 /* AppDelegate.swift in Sources */,
+				2577103728E7748F00528FFC /* ProgramasTVC.swift in Sources */,
 				2184E3A528E51B5C00E7E3E3 /* SceneDelegate.swift in Sources */,
 				2184E3EA28E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift in Sources */,
 				2184E3D328E51B8B00E7E3E3 /* perfilUsuarioViewController.swift in Sources */,
