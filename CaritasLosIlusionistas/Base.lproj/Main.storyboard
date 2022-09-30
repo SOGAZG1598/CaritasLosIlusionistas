@@ -373,7 +373,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondopb" translatesAutoresizingMaskIntoConstraints="NO" id="459-Oy-tpd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FONDO_00000" translatesAutoresizingMaskIntoConstraints="NO" id="459-Oy-tpd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -437,7 +437,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondopb" translatesAutoresizingMaskIntoConstraints="NO" id="u4g-Tl-y5l">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FONDO_00000" translatesAutoresizingMaskIntoConstraints="NO" id="u4g-Tl-y5l">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -714,9 +714,9 @@
     </scenes>
     <resources>
         <image name="DP ejemplo" width="756" height="702"/>
+        <image name="FONDO_00000" width="750" height="1334"/>
         <image name="PruebaWWP3" width="1500" height="2668"/>
         <image name="TemplatePerfil" width="1500" height="2668"/>
-        <image name="fondopb" width="1500" height="2668"/>
         <image name="logoCaritas" width="318" height="158"/>
         <image name="logoCaritas-removebg-preview" width="318" height="158"/>
         <image name="menucard.fill" catalog="system" width="106" height="128"/>
