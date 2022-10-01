@@ -7,10 +7,10 @@
 
 import UIKit
 
-class programasUsuarioTableViewController: UITableViewController {
+class programasUsuarioTableViewController: UITableViewController{
     
     
-    var programas = ["Banco de alimentos", "Prueba 2", "Prueba 3"]
+    var programas = ["Banco de alimentos", "Banco de medicamentos", "Cáritas parroquiales"]
 
     @IBOutlet var programTableView: UITableView!
     
@@ -19,17 +19,25 @@ class programasUsuarioTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Programas del usuario"
+        programTableView.delegate = self
+        self.title = "Programas"
 
         
         programTableView.delegate = self
         programTableView.dataSource = self
         programTableView.separatorStyle = .none
-        programTableView.showsVerticalScrollIndicator = false 
+        programTableView.showsVerticalScrollIndicator = false
+        
+        
         
     }
 
     // MARK: - Table view data source
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
 
@@ -49,6 +57,13 @@ class programasUsuarioTableViewController: UITableViewController {
         cell.programLbl.text = programas
         cell.programasImgView.image = UIImage(named: programas)
 
+        
+        //Make cell look good
+        
+        
+        cell.programasView.layer.cornerRadius = cell.programasView.frame.height / 2
+        cell.programasImgView.layer.cornerRadius = cell.programasImgView.frame.height / 2
+        
         return cell
     }
     

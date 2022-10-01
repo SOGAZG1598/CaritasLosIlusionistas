@@ -8,38 +8,68 @@
 import UIKit
 
 class programasAdminTableViewController: UITableViewController {
+    
+    
+    var programasAdmin = ["Banco de Alimentos ✪", "Banco de Medicamentos ✪", "Cáritas Parroquiales ✪"]
 
+    @IBOutlet var programaAdminTableView: UITableView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Programa del admin"
+        self.title = "Programas"
+        
+        programaAdminTableView.delegate = self
+        programaAdminTableView.dataSource = self
+        
+        
+        //make look cool
+        
+        
+        programaAdminTableView.separatorStyle = .none
+        programaAdminTableView.showsVerticalScrollIndicator = false
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return programasAdmin.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = programaAdminTableView.dequeueReusableCell(withIdentifier: "programasAdminCell", for: indexPath) as! ProgramasAdminTVC
+        let programas_Admin = programasAdmin[indexPath.row]
+        
+        cell.programasAdminLbl.text = programas_Admin
+        cell.programasAdminImgView.image = UIImage(named: programas_Admin)
+        
+        
+        //make cell look good
+        
+        cell.programasAdminView.layer.cornerRadius = cell.programasAdminView.frame.height / 2
+        cell.programasAdminImgView.layer.cornerRadius = cell.programasAdminImgView.frame.height / 2
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
