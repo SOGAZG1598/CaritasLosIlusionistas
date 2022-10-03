@@ -26,7 +26,9 @@
 		2184E3E828E51CDE00E7E3E3 /* registroAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */; };
 		2184E3EA28E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */; };
 		2577103728E7748F00528FFC /* ProgramasTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2577103628E7748F00528FFC /* ProgramasTVC.swift */; };
+		2577103928E7904D00528FFC /* ProgramasAdminTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2577103828E7904D00528FFC /* ProgramasAdminTVC.swift */; };
 		25FDDE0228E520FD00B3C028 /* detalleProgramasAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FDDE0128E520FD00B3C028 /* detalleProgramasAdminViewController.swift */; };
+		FB45AE4D28E89B01001379DF /* listaVoluntarioTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB45AE4C28E89B01001379DF /* listaVoluntarioTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +72,9 @@
 		2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroAdminViewController.swift; sourceTree = "<group>"; };
 		2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleProgramasUsuarioViewController.swift; sourceTree = "<group>"; };
 		2577103628E7748F00528FFC /* ProgramasTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramasTVC.swift; sourceTree = "<group>"; };
+		2577103828E7904D00528FFC /* ProgramasAdminTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramasAdminTVC.swift; sourceTree = "<group>"; };
 		25FDDE0128E520FD00B3C028 /* detalleProgramasAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleProgramasAdminViewController.swift; sourceTree = "<group>"; };
+		FB45AE4C28E89B01001379DF /* listaVoluntarioTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listaVoluntarioTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 				2184E3A428E51B5C00E7E3E3 /* SceneDelegate.swift */,
 				2184E3A628E51B5C00E7E3E3 /* ViewController.swift */,
 				2184E3A828E51B5C00E7E3E3 /* Main.storyboard */,
+				2577103828E7904D00528FFC /* ProgramasAdminTVC.swift */,
 				2577103628E7748F00528FFC /* ProgramasTVC.swift */,
 				25FDDE0128E520FD00B3C028 /* detalleProgramasAdminViewController.swift */,
 				2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */,
@@ -134,6 +139,7 @@
 				2184E3AD28E51B5D00E7E3E3 /* LaunchScreen.storyboard */,
 				2184E3B028E51B5D00E7E3E3 /* Info.plist */,
 				2184E3DF28E51C3100E7E3E3 /* usuario */,
+				FB45AE4C28E89B01001379DF /* listaVoluntarioTVC.swift */,
 			);
 			path = CaritasLosIlusionistas;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB45AE4D28E89B01001379DF /* listaVoluntarioTVC.swift in Sources */,
 				2184E3DC28E51C1600E7E3E3 /* voluntariosAdminTableViewController.swift in Sources */,
 				2184E3D528E51B9600E7E3E3 /* perfilAdminViewController.swift in Sources */,
 				2184E3DE28E51C2200E7E3E3 /* programasAdminTableViewController.swift in Sources */,
@@ -326,6 +333,7 @@
 				2577103728E7748F00528FFC /* ProgramasTVC.swift in Sources */,
 				2184E3A528E51B5C00E7E3E3 /* SceneDelegate.swift in Sources */,
 				2184E3EA28E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift in Sources */,
+				2577103928E7904D00528FFC /* ProgramasAdminTVC.swift in Sources */,
 				2184E3D328E51B8B00E7E3E3 /* perfilUsuarioViewController.swift in Sources */,
 				2184E3E128E51C4400E7E3E3 /* programasUsuarioTableViewController.swift in Sources */,
 				2184E3E828E51CDE00E7E3E3 /* registroAdminViewController.swift in Sources */,

@@ -1,72 +1,45 @@
 //
-//  programasUsuarioTableViewController.swift
+//  listaVoluntariosTVC.swift
 //  CaritasLosIlusionistas
 //
-//  Created by Sebastián Jaiovi on 28/09/22.
+//  Created by Alumno on 01/10/22.
 //
 
 import UIKit
 
-class programasUsuarioTableViewController: UITableViewController{
-    
-    
-    var programas = ["Banco de alimentos", "Banco de medicamentos", "Cáritas parroquiales"]
+class listaVoluntariosTVC: UITableViewController {
 
-    @IBOutlet var programTableView: UITableView!
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        programTableView.delegate = self
-        self.title = "Programas"
 
-        
-        programTableView.delegate = self
-        programTableView.dataSource = self
-        programTableView.separatorStyle = .none
-        programTableView.showsVerticalScrollIndicator = false
-        
-        
-        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
-    
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return programas.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = programTableView.dequeueReusableCell(withIdentifier: "programCell", for: indexPath) as! ProgramasTVC
-        let programas = programas[indexPath.row]
-        
-        cell.programLbl.text = programas
-        cell.programasImgView.image = UIImage(named: programas)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        
-        //Make cell look good
-        
-        
-        cell.programasView.layer.cornerRadius = cell.programasView.frame.height / 2
-        cell.programasImgView.layer.cornerRadius = cell.programasImgView.frame.height / 2
-        
+        // Configure the cell...
+
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -114,5 +87,3 @@ class programasUsuarioTableViewController: UITableViewController{
     */
 
 }
-
-
