@@ -135,18 +135,13 @@
 				2184E3DA28E51BDD00E7E3E3 /* admin */,
 				2184E3A228E51B5C00E7E3E3 /* AppDelegate.swift */,
 				2184E3A428E51B5C00E7E3E3 /* SceneDelegate.swift */,
-				2184E3A628E51B5C00E7E3E3 /* ViewController.swift */,
+				21F096CF28EC7AC00076C0AB /* Login y Registro */,
 				2184E3A828E51B5C00E7E3E3 /* Main.storyboard */,
-				2577103828E7904D00528FFC /* ProgramasAdminTVC.swift */,
-				2577103628E7748F00528FFC /* ProgramasTVC.swift */,
-				25FDDE0128E520FD00B3C028 /* detalleProgramasAdminViewController.swift */,
-				2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */,
 				2184E3E428E51CCD00E7E3E3 /* registro */,
 				2184E3AB28E51B5D00E7E3E3 /* Assets.xcassets */,
 				2184E3AD28E51B5D00E7E3E3 /* LaunchScreen.storyboard */,
 				2184E3B028E51B5D00E7E3E3 /* Info.plist */,
 				2184E3DF28E51C3100E7E3E3 /* usuario */,
-				FB45AE4C28E89B01001379DF /* listaVoluntarioTVC.swift */,
 			);
 			path = CaritasLosIlusionistas;
 			sourceTree = "<group>";
@@ -171,7 +166,9 @@
 		2184E3DA28E51BDD00E7E3E3 /* admin */ = {
 			isa = PBXGroup;
 			children = (
+				21F096CE28EC7AB00076C0AB /* Programa Table Cell */,
 				2184E3D428E51B9600E7E3E3 /* perfilAdminViewController.swift */,
+				25FDDE0128E520FD00B3C028 /* detalleProgramasAdminViewController.swift */,
 				2184E3DB28E51C1600E7E3E3 /* voluntariosAdminTableViewController.swift */,
 				2184E3DD28E51C2200E7E3E3 /* programasAdminTableViewController.swift */,
 			);
@@ -181,7 +178,9 @@
 		2184E3DF28E51C3100E7E3E3 /* usuario */ = {
 			isa = PBXGroup;
 			children = (
+				21F096CD28EC7A110076C0AB /* Programa Table Cell */,
 				2184E3E028E51C4400E7E3E3 /* programasUsuarioTableViewController.swift */,
+				2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */,
 				2184E3D228E51B8B00E7E3E3 /* perfilUsuarioViewController.swift */,
 			);
 			path = usuario;
@@ -205,6 +204,31 @@
 				21F096CB28EC76310076C0AB /* Admin.swift */,
 			);
 			path = Modelos;
+			sourceTree = "<group>";
+		};
+		21F096CD28EC7A110076C0AB /* Programa Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2577103628E7748F00528FFC /* ProgramasTVC.swift */,
+			);
+			path = "Programa Table Cell";
+			sourceTree = "<group>";
+		};
+		21F096CE28EC7AB00076C0AB /* Programa Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2577103828E7904D00528FFC /* ProgramasAdminTVC.swift */,
+				FB45AE4C28E89B01001379DF /* listaVoluntarioTVC.swift */,
+			);
+			path = "Programa Table Cell";
+			sourceTree = "<group>";
+		};
+		21F096CF28EC7AC00076C0AB /* Login y Registro */ = {
+			isa = PBXGroup;
+			children = (
+				2184E3A628E51B5C00E7E3E3 /* ViewController.swift */,
+			);
+			path = "Login y Registro";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

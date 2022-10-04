@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         //poner imagen fondo
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "PruebaWWP2")!)
+        
+        
     }
 
     @IBAction func loginAccion(_ sender: UIButton) {

@@ -21,6 +21,12 @@ class perfilUsuarioViewController: UIViewController {
      
         
     }
+    @IBAction func LogOut(_ sender: UIButton) {
+        defaults.removeObject(forKey: "idUsuarios")
+        defaults.removeObject(forKey: "emailUsuarios")
+        defaults.removeObject(forKey: "nombreCompleto")
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+    }
     
 
     /*

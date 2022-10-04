@@ -15,7 +15,10 @@ class registroAdminViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func crearAdmin(_ sender: UIButton) {
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -59,6 +59,15 @@
                                 <color key="textColor" name="AzulCaritas"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-0k-1xO">
+                                <rect key="frame" x="248" y="20" width="111" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cerrar sesión"/>
+                                <connections>
+                                    <action selector="LogOut:" destination="qSJ-9y-qsc" eventType="touchUpInside" id="dOM-W4-du8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m7s-aw-eSv"/>
                         <color key="backgroundColor" name="GrisLightCaritas"/>
@@ -348,6 +357,21 @@
             </objects>
             <point key="canvasLocation" x="2132" y="-1159"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="CZr-C1-bM9">
+            <objects>
+                <viewController id="C2M-Px-Q8O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wwm-xo-JCy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VRA-VW-l7g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebp-hj-Die" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2910" y="-1375"/>
+        </scene>
         <!--Registro General View Controller-->
         <scene sceneID="AcC-ed-8UJ">
             <objects>
@@ -522,6 +546,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Crear Usuario"/>
                                 <connections>
+                                    <action selector="crearAdmin:" destination="khA-JW-we4" eventType="touchUpInside" id="bZM-yb-Akj"/>
                                     <action selector="registroPrimeroAccion:" destination="ZMJ-QM-kb8" eventType="touchUpInside" id="mBk-06-TtW"/>
                                 </connections>
                             </button>
@@ -575,22 +600,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-pl-DGK">
-                                <rect key="frame" x="86" y="416" width="203" height="31"/>
+                                <rect key="frame" x="86" y="411" width="203" height="31"/>
                                 <color key="tintColor" name="CelesteCaritas"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Crear Usuario"/>
                                 <connections>
+                                    <action selector="crearVoluntario:" destination="HwA-LC-ZoL" eventType="touchUpInside" id="7dx-69-ABK"/>
                                     <action selector="registroPrimeroAccion:" destination="ZMJ-QM-kb8" eventType="touchUpInside" id="okM-1R-0C5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2do Paso  Registro de Usuario" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-d5-zRU">
-                                <rect key="frame" x="25" y="44" width="221" height="50.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2do Paso  Registro de Voluntario" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-d5-zRU">
+                                <rect key="frame" x="25" y="44" width="221" height="45.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mK1-Z4-yxH">
-                                <rect key="frame" x="25" y="118.5" width="325" height="272.5"/>
+                                <rect key="frame" x="25" y="113.5" width="325" height="272.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curso de Inducción:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJV-wT-Vf2">
                                         <rect key="frame" x="0.0" y="0.0" width="325" height="20.5"/>
