@@ -79,6 +79,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" selectedImage="person.fill" id="F9S-Z0-64Z"/>
+                    <connections>
+                        <outlet property="lbNombreCompleto" destination="j6U-eY-wKw" id="PcG-4K-U94"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MW9-ix-4dF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
