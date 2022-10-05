@@ -513,7 +513,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="pFk-4l-BhX"/>
                     <connections>
-                        <outlet property="lbEmailRegistro" destination="7X2-rM-JHx" id="OSJ-lP-3Tw"/>
+                        <outlet property="tfApellidoMaterno" destination="hjg-y3-5g7" id="EWS-sr-tBH"/>
+                        <outlet property="tfApellidoPaterno" destination="2Xt-Mf-gQN" id="B39-Xi-fnX"/>
+                        <outlet property="tfCurp" destination="Hlf-5b-DuO" id="WUN-Oy-yNm"/>
+                        <outlet property="tfEmail" destination="7X2-rM-JHx" id="tad-nO-44h"/>
+                        <outlet property="tfNombre" destination="H8D-9N-mFe" id="SNM-MD-lqo"/>
+                        <outlet property="tfPassword" destination="jPh-fx-pIr" id="fm3-hi-8vW"/>
+                        <outlet property="tfTelefono" destination="oEw-kI-uJ4" id="A2b-Cb-kdx"/>
                         <segue destination="HwA-LC-ZoL" kind="presentation" identifier="usuarioRegistroSegue" modalPresentationStyle="fullScreen" id="AE4-d4-1ZB"/>
                         <segue destination="khA-JW-we4" kind="presentation" identifier="adminRegistroSegue" modalPresentationStyle="fullScreen" id="Fe2-ZX-tnD"/>
                     </connections>
@@ -694,6 +700,10 @@
                             <constraint firstItem="XYi-pl-DGK" firstAttribute="leading" secondItem="33m-Wl-IL3" secondAttribute="leading" constant="86" id="vsY-EF-uy8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tfDomicilio" destination="IEv-Y0-LQQ" id="MU9-6w-Fcy"/>
+                        <outlet property="tfNombreDeLugar" destination="Nj6-OG-C4b" id="Hzw-lX-JVc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMb-Nt-zPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

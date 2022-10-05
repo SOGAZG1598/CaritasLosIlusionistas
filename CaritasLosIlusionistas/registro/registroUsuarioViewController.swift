@@ -9,6 +9,13 @@ import UIKit
 
 class registroUsuarioViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var tfNombreDeLugar: UITextField!
+    
+    @IBOutlet weak var tfDomicilio: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +23,14 @@ class registroUsuarioViewController: UIViewController {
     }
     
     @IBAction func crearVoluntario(_ sender: UIButton) {
+        
+        
+        let nombreDelLugar = tfNombreDeLugar.text!
+        let domicilio = tfDomicilio.text!
+        
+    
+    
+        
         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
