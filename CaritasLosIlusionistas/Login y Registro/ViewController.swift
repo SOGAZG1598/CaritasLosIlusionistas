@@ -126,6 +126,7 @@ class ViewController: UIViewController {
         defaults.setValue(nombreCompleto, forKey: "nombreCompleto")
     }
     
+    
     func alertas(titulo:String , texto:String) ->Void{
         let alerta = UIAlertController(title:titulo, message: texto, preferredStyle: .alert)
         let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
