@@ -10,7 +10,7 @@ import UIKit
 
 
 //ESTE ES EL LOGIN
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     let defaults = UserDefaults.standard
     
     @IBOutlet weak var lbEmail: UITextField!
@@ -132,6 +132,11 @@ class ViewController: UIViewController {
         let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alerta.addAction(botonCancel)
         present(alerta, animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 }

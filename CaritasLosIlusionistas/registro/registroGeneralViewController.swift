@@ -7,7 +7,7 @@
 
 import UIKit
 
-class registroGeneralViewController: UIViewController {
+class registroGeneralViewController: UIViewController, UITextFieldDelegate {
     
     let defaults = UserDefaults.standard
 
@@ -51,9 +51,13 @@ class registroGeneralViewController: UIViewController {
         
         if let emailusad = tfEmail.text, let password = tfPassword.text, let curp = tfCurp.text, let nombre = tfNombre.text, let apellidoP = tfApellidoPaterno.text, let apellidoM = tfApellidoMaterno.text, let telefono = tfTelefono.text, !emailusad.isEmpty , !password.isEmpty, !curp.isEmpty, !nombre.isEmpty , !apellidoM.isEmpty, !apellidoP.isEmpty , !telefono.isEmpty{
             
-            let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password]
-            
-            return crearUsuario
+            if password.count < 8 || curp.count < 14{
+                alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
+            }else{
+                let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password]
+                
+                return crearUsuario
+            }
         }else{
             alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
         }
@@ -129,6 +133,11 @@ class registroGeneralViewController: UIViewController {
         let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alerta.addAction(botonCancel)
         present(alerta, animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
 }
