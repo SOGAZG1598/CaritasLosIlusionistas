@@ -8,7 +8,8 @@
 import UIKit
 
 class perfilAdminViewController: UIViewController {
-
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +17,12 @@ class perfilAdminViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cerrarSesionBoton(_ sender: UIButton) {
+        defaults.removeObject(forKey: "idUsuarios")
+        defaults.removeObject(forKey: "emailUsuarios")
+        defaults.removeObject(forKey: "nombreCompleto")
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    */
+
 
 }
