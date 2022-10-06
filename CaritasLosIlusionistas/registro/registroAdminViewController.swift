@@ -9,6 +9,8 @@ import UIKit
 
 class registroAdminViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var tfDepartamento: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -622,6 +622,9 @@
                             <constraint firstItem="9YL-zg-WeA" firstAttribute="trailing" secondItem="V49-eh-GZ7" secondAttribute="trailing" constant="86" id="zIr-RQ-nZh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tfDepartamento" destination="rsD-3j-ix1" id="Nau-rF-Q8s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCq-SF-gJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -670,6 +673,9 @@
                                             <segment title="Sí"/>
                                             <segment title="No"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="sgCursoInduccion:" destination="HwA-LC-ZoL" eventType="valueChanged" id="31B-ql-eA6"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocupación:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tim-R3-4OZ">
                                         <rect key="frame" x="0.0" y="61.5" width="325" height="17"/>
@@ -684,6 +690,9 @@
                                             <segment title="Estudio"/>
                                             <segment title="Otro"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="sgOcupacion:" destination="HwA-LC-ZoL" eventType="valueChanged" id="5oD-wy-M9V"/>
+                                        </connections>
                                     </segmentedControl>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del Lugar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-OG-C4b">
                                         <rect key="frame" x="0.0" y="119.5" width="325" height="34"/>
@@ -707,6 +716,9 @@
                                             <segment title="Superior"/>
                                             <segment title="Media Superior"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="sgEscolaridad:" destination="HwA-LC-ZoL" eventType="valueChanged" id="ggB-Cs-BHK"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domicilio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLJ-VZ-ZhT">
                                         <rect key="frame" x="0.0" y="216.5" width="325" height="17"/>

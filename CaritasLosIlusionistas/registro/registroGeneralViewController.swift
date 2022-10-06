@@ -51,15 +51,15 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
         
         if let emailusad = tfEmail.text, let password = tfPassword.text, let curp = tfCurp.text, let nombre = tfNombre.text, let apellidoP = tfApellidoPaterno.text, let apellidoM = tfApellidoMaterno.text, let telefono = tfTelefono.text, !emailusad.isEmpty , !password.isEmpty, !curp.isEmpty, !nombre.isEmpty , !apellidoM.isEmpty, !apellidoP.isEmpty , !telefono.isEmpty{
             
-            if password.count < 8 || curp.count < 18{
-                alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
+            if password.count < 8 || curp.count == 18{
+                alertas(titulo: "Aviso", texto: "Espacio con longitud mayor")
             }else{
                 let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password]
                 
                 return crearUsuario
             }
         }else{
-            alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
+            alertas(titulo: "Aviso", texto: "Espacio vacío y/o incorrecto")
         }
          //nunca se va usar, so
         return nil
@@ -68,10 +68,8 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
     
     func API_Registro()->Int{
             var verificador = -1
-            var Sverificador = ""
-            
+            //var Sverificador = ""
             //https://stackoverflow.com/a/60440711
-            //let crearUsuario: [String: Any] = ["nombreUsuarios": "Juan", "apellidoPaterno": "Alberto", "apellidoMaterno": "Perez", "curpUsuarios": "BBABAB", "emailUsuarios": "@caritas.mx","telefonoUsuarios": "9959495646","passUsuarios": "123"]
             let crearUsuario = lecturaTextFields()
             //let vacioCrearUsuario : [String: Any] = ["":""]
             if crearUsuario == nil {
