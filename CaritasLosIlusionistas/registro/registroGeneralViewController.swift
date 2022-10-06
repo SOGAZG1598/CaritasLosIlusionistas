@@ -8,6 +8,8 @@
 import UIKit
 
 class registroGeneralViewController: UIViewController {
+    
+    let defaults = UserDefaults.standard
 
     
     @IBOutlet weak var tfEmail: UITextField!
@@ -84,33 +86,34 @@ class registroGeneralViewController: UIViewController {
             request.httpBody = jsonData
 
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {
-                    print(error?.localizedDescription ?? "No data")
-                    return
-                }
-                
-                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-                Sverificador = (responseJSON as! [String: Any])["idUsuarios"] as! String
-                print("mi datito es \(Sverificador)")
-                
-                
-                if let responseJSON = responseJSON as? [String: Any] {
-                    print(responseJSON) //Code after Successfull POST Request
-                    print(responseJSON["idUsuarios"]!)
+                        guard let data = data, error == nil else {
+                            print(error?.localizedDescription ?? "No data")
+                            return
+                        }
+                        
+                        let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                        //Sverificador = (responseJSON as! [String: Any])["idUsuarios"] as! String
+                        //print("mi datito es \(Sverificador)")
+                        
+                        
+                        if let responseJSON = responseJSON as? [String: Int] {
+                            print(responseJSON) //Code after Successfull POST Request
+                            verificador = responseJSON["idUsuarios"]!
+                            print(verificador)
+                            //self.defaults.setValue(verificador, forKey: "idUsuarios")
+                            self.setearDefault(idUsuario: verificador)
+                        }
+                    }
                     
-                    //guarda el datito en verificador
-                    //let datito = responseJSON["idUsuarios"] as String
-                    //verificador = Int(datito) ?? 0
-                    //verificador = Integer.parseInt(jsonObj.get("id"));
-                    //if let datito = responseJSON["idUsuarios"] as? Int{ verificador = datito}
-                 
+                    task.resume()
+
+                    verificador = defaults.integer(forKey: "idUsuarios")
+                    print(verificador)
+                    return verificador
                 }
+            func setearDefault(idUsuario: Int){
+                defaults.setValue(idUsuario, forKey: "idUsuarios")
             }
-            
-            task.resume()
-            verificador = Int(Sverificador) ?? 0
-            return 1
-        }
     
     /*
     // MARK: - Navigation
