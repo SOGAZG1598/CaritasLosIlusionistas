@@ -88,7 +88,10 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             // insert json data to the request
             request.httpBody = jsonData
-
+            //reparacion de la prof
+            let group = DispatchGroup()
+            group.enter()
+            //inicia el request
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                         guard let data = data, error == nil else {
                             print(error?.localizedDescription ?? "No data")
@@ -104,20 +107,19 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
                             print(responseJSON) //Code after Successfull POST Request
                             verificador = responseJSON["idUsuarios"]!
                             print(verificador)
-                            //self.defaults.setValue(verificador, forKey: "idUsuarios")
-                            self.setearDefault(idUsuario: verificador)
+                            self.defaults.setValue(verificador, forKey: "idUsuarios")
+                            //self.setearDefault(idUsuario: verificador)
                         }
+                        group.leave()
                     }
                     
                     task.resume()
+                    group.wait()
 
                     verificador = defaults.integer(forKey: "idUsuarios")
                     print(verificador)
                     return verificador
                 }
-            func setearDefault(idUsuario: Int){
-                defaults.setValue(idUsuario, forKey: "idUsuarios")
-            }
     
     /*
     // MARK: - Navigation
