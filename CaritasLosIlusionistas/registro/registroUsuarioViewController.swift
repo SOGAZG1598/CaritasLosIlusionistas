@@ -7,7 +7,7 @@
 
 import UIKit
 
-class registroUsuarioViewController: UIViewController {
+class registroUsuarioViewController: UIViewController, UITextFieldDelegate {
 
     
     
@@ -32,6 +32,11 @@ class registroUsuarioViewController: UIViewController {
     
         
         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     /*

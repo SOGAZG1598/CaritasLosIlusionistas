@@ -7,7 +7,7 @@
 
 import UIKit
 
-class registroAdminViewController: UIViewController {
+class registroAdminViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,11 @@ class registroAdminViewController: UIViewController {
     
     @IBAction func crearAdmin(_ sender: UIButton) {
         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     /*

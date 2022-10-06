@@ -51,7 +51,7 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
         
         if let emailusad = tfEmail.text, let password = tfPassword.text, let curp = tfCurp.text, let nombre = tfNombre.text, let apellidoP = tfApellidoPaterno.text, let apellidoM = tfApellidoMaterno.text, let telefono = tfTelefono.text, !emailusad.isEmpty , !password.isEmpty, !curp.isEmpty, !nombre.isEmpty , !apellidoM.isEmpty, !apellidoP.isEmpty , !telefono.isEmpty{
             
-            if password.count < 8 || curp.count < 14{
+            if password.count < 8 || curp.count < 18{
                 alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
             }else{
                 let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password]

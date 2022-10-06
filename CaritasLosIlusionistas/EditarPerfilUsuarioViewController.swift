@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditarPerfilUsuarioViewController: UIViewController {
+class EditarPerfilUsuarioViewController: UIViewController, UITextFieldDelegate {
 
     let defaults = UserDefaults.standard
     
@@ -54,10 +54,13 @@ class EditarPerfilUsuarioViewController: UIViewController {
         
         if let emailusad = tfEmail.text, let password = tfPassword.text, let curp = tfCurp.text, let nombre = tfNombre.text, let apellidoP = tfApellidoP.text, let apellidoM = tfApellidoM.text, let telefono = tfTelefono.text, !emailusad.isEmpty , !password.isEmpty, !curp.isEmpty, !nombre.isEmpty , !apellidoM.isEmpty, !apellidoP.isEmpty , !telefono.isEmpty{
             
-            let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password, "idUsuarios": defaults.integer(forKey: "idUsuarios")]
-            
-            
-            return crearUsuario
+            if password.count < 8 || curp.count < 18 || telefono.count > 15{
+                alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
+            }else{
+                let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password]
+                
+                return crearUsuario
+            }
         }else{
             alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
         }
@@ -120,6 +123,11 @@ class EditarPerfilUsuarioViewController: UIViewController {
             let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alerta.addAction(botonCancel)
             present(alerta, animated: true)
+        }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
         }
 
 }
