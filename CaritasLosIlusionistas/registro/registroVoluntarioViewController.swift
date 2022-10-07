@@ -7,7 +7,7 @@
 
 import UIKit
 
-class registroUsuarioViewController: UIViewController, UITextFieldDelegate {
+class registroVoluntarioViewController: UIViewController, UITextFieldDelegate {
     let defaults = UserDefaults.standard
     @IBOutlet weak var tfNombreDeLugar: UITextField!
     @IBOutlet weak var tfDomicilio: UITextField!
@@ -97,11 +97,8 @@ class registroUsuarioViewController: UIViewController, UITextFieldDelegate {
     }
     
     func API_RegistroPt2()->Int{
-            //var verificador = -1
-            //var Sverificador = ""
             //https://stackoverflow.com/a/60440711
             let crearVoluntario = lecturaTextFields()
-            //let vacioCrearUsuario : [String: Any] = ["":""]
             if crearVoluntario == nil {
                 return -1
             }
@@ -127,9 +124,6 @@ class registroUsuarioViewController: UIViewController, UITextFieldDelegate {
                         }
                         
                         let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-                        //Sverificador = (responseJSON as! [String: Any])["idUsuarios"] as! String
-                        //print("mi datito es \(Sverificador)")
-                        
                         
                         if let responseJSON = responseJSON as? [String: Int] {
                             print(responseJSON) //Code after Successfull POST Request

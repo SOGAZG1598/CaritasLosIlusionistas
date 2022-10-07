@@ -22,7 +22,7 @@
 		2184E3DE28E51C2200E7E3E3 /* programasAdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3DD28E51C2200E7E3E3 /* programasAdminTableViewController.swift */; };
 		2184E3E128E51C4400E7E3E3 /* programasUsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E028E51C4400E7E3E3 /* programasUsuarioTableViewController.swift */; };
 		2184E3E328E51CC600E7E3E3 /* registroGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E228E51CC600E7E3E3 /* registroGeneralViewController.swift */; };
-		2184E3E628E51CD900E7E3E3 /* registroUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E528E51CD900E7E3E3 /* registroUsuarioViewController.swift */; };
+		2184E3E628E51CD900E7E3E3 /* registroVoluntarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E528E51CD900E7E3E3 /* registroVoluntarioViewController.swift */; };
 		2184E3E828E51CDE00E7E3E3 /* registroAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */; };
 		2184E3EA28E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */; };
 		21BC76E228EBAC7E00B67701 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC76E128EBAC7E00B67701 /* Usuario.swift */; };
@@ -73,7 +73,7 @@
 		2184E3DD28E51C2200E7E3E3 /* programasAdminTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programasAdminTableViewController.swift; sourceTree = "<group>"; };
 		2184E3E028E51C4400E7E3E3 /* programasUsuarioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programasUsuarioTableViewController.swift; sourceTree = "<group>"; };
 		2184E3E228E51CC600E7E3E3 /* registroGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroGeneralViewController.swift; sourceTree = "<group>"; };
-		2184E3E528E51CD900E7E3E3 /* registroUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroUsuarioViewController.swift; sourceTree = "<group>"; };
+		2184E3E528E51CD900E7E3E3 /* registroVoluntarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroVoluntarioViewController.swift; sourceTree = "<group>"; };
 		2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroAdminViewController.swift; sourceTree = "<group>"; };
 		2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleProgramasUsuarioViewController.swift; sourceTree = "<group>"; };
 		21BC76E128EBAC7E00B67701 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		2184E3E428E51CCD00E7E3E3 /* registro */ = {
 			isa = PBXGroup;
 			children = (
-				2184E3E528E51CD900E7E3E3 /* registroUsuarioViewController.swift */,
+				2184E3E528E51CD900E7E3E3 /* registroVoluntarioViewController.swift */,
 				2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */,
 				2184E3E228E51CC600E7E3E3 /* registroGeneralViewController.swift */,
 			);
@@ -384,7 +384,7 @@
 				2184E3DE28E51C2200E7E3E3 /* programasAdminTableViewController.swift in Sources */,
 				21BC76E228EBAC7E00B67701 /* Usuario.swift in Sources */,
 				2184E3E328E51CC600E7E3E3 /* registroGeneralViewController.swift in Sources */,
-				2184E3E628E51CD900E7E3E3 /* registroUsuarioViewController.swift in Sources */,
+				2184E3E628E51CD900E7E3E3 /* registroVoluntarioViewController.swift in Sources */,
 				25FDDE0228E520FD00B3C028 /* detalleProgramasAdminViewController.swift in Sources */,
 				2184E3A728E51B5C00E7E3E3 /* ViewController.swift in Sources */,
 				2184E3A328E51B5C00E7E3E3 /* AppDelegate.swift in Sources */,

@@ -51,8 +51,8 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
         
         if let emailusad = tfEmail.text, let password = tfPassword.text, let curp = tfCurp.text, let nombre = tfNombre.text, let apellidoP = tfApellidoPaterno.text, let apellidoM = tfApellidoMaterno.text, let telefono = tfTelefono.text, !emailusad.isEmpty , !password.isEmpty, !curp.isEmpty, !nombre.isEmpty , !apellidoM.isEmpty, !apellidoP.isEmpty , !telefono.isEmpty{
             
-            if password.count < 8 || curp.count == 18{
-                alertas(titulo: "Aviso", texto: "Espacio con longitud mayor")
+            if password.count < 8 || curp.count == 19{
+                alertas(titulo: "Aviso", texto: "Espacio con longitud no exacta")
             }else{
                 let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password]
                 
@@ -106,7 +106,6 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
                             verificador = responseJSON["idUsuarios"]!
                             print(verificador)
                             self.defaults.setValue(verificador, forKey: "idUsuarios")
-                            //self.setearDefault(idUsuario: verificador)
                         }
                         group.leave()
                     }

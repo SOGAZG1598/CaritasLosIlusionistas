@@ -10,8 +10,13 @@ import UIKit
 class perfilAdminViewController: UIViewController {
     let defaults = UserDefaults.standard
     
+    @IBOutlet weak var lbNombreCompleto: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nombreCompleto = defaults.string(forKey: "nombreCompleto")!
+        lbNombreCompleto.text = nombreCompleto
 
         // Do any additional setup after loading the view.
     }
