@@ -26,6 +26,7 @@
 		2184E3E828E51CDE00E7E3E3 /* registroAdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */; };
 		2184E3EA28E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */; };
 		21BC76E228EBAC7E00B67701 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BC76E128EBAC7E00B67701 /* Usuario.swift */; };
+		21D950A728F60F2D0024CA8C /* Programa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D950A628F60F2D0024CA8C /* Programa.swift */; };
 		21F096CA28EC76200076C0AB /* Voluntario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F096C928EC76200076C0AB /* Voluntario.swift */; };
 		21F096CC28EC76310076C0AB /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F096CB28EC76310076C0AB /* Admin.swift */; };
 		2566805E28EE12890073D7F7 /* EditarPerfilUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566805D28EE12890073D7F7 /* EditarPerfilUsuarioViewController.swift */; };
@@ -77,6 +78,7 @@
 		2184E3E728E51CDE00E7E3E3 /* registroAdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registroAdminViewController.swift; sourceTree = "<group>"; };
 		2184E3E928E51E9700E7E3E3 /* detalleProgramasUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalleProgramasUsuarioViewController.swift; sourceTree = "<group>"; };
 		21BC76E128EBAC7E00B67701 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		21D950A628F60F2D0024CA8C /* Programa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Programa.swift; sourceTree = "<group>"; };
 		21F096C928EC76200076C0AB /* Voluntario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voluntario.swift; sourceTree = "<group>"; };
 		21F096CB28EC76310076C0AB /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		2566805D28EE12890073D7F7 /* EditarPerfilUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilUsuarioViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				21BC76E128EBAC7E00B67701 /* Usuario.swift */,
 				21F096C928EC76200076C0AB /* Voluntario.swift */,
 				21F096CB28EC76310076C0AB /* Admin.swift */,
+				21D950A628F60F2D0024CA8C /* Programa.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				2566806028EF1C270073D7F7 /* EditarAdminViewController.swift in Sources */,
 				2184E3E128E51C4400E7E3E3 /* programasUsuarioTableViewController.swift in Sources */,
 				21F096CA28EC76200076C0AB /* Voluntario.swift in Sources */,
+				21D950A728F60F2D0024CA8C /* Programa.swift in Sources */,
 				2184E3E828E51CDE00E7E3E3 /* registroAdminViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
