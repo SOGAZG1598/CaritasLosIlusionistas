@@ -124,5 +124,65 @@ class programasAdminTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func llamadaAPI_Login() ->Bool{
+        var emailBuscar = ""
+        var contra = ""
+        var idUsuario = 0
+        var nombreCompleto = ""
+        
+        var loginExitoso = false
+        var notificacion = ""
+        
+        // CHECA SI HAY ESPACIOS VACIOS
+
+        //INICIA API
+        guard let url = URL(string:"https://equipo05.tc2007b.tec.mx:10210/usuarios/login?emailUsuarios=\(emailBuscar)")
+        else {
+            return loginExitoso
+        }
+        
+        let grupo = DispatchGroup()
+        grupo.enter()
+    
+        let task = URLSession.shared.dataTask(with: url){
+            data, response, error in
+            
+            /*
+            if let data = data, let string = String(data: data, encoding: .utf8){
+                print(string)
+            }
+             */
+            
+        let decoder = JSONDecoder()
+
+                if let data = data{
+                    do{
+                let tasks = try decoder.decode([Programa].self, from: data)
+                if (!tasks.isEmpty){
+                    tasks.forEach{ i in
+                        //aqui se desglosa
+                        
+                    }
+                }else{
+                    //respuestaUsuario = "Usuario NO Encontrado"
+                    notificacion = "Usuario no encontrado"
+                }
+            }catch{
+                print(error)
+            }
+            }
+            grupo.leave()
+            }
+
+            task.resume()
+        
+            grupo.wait()
+            if notificacion != ""{
+                alertas(titulo: "Aviso", texto: notificacion)
+            }
+            
+            //lbRespuesta.text = respuestaUsuario
+            return loginExitoso
+    }
 
 }
