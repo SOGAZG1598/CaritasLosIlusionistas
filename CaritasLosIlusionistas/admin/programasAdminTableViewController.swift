@@ -10,7 +10,7 @@ import UIKit
 class programasAdminTableViewController: UITableViewController {
     
     
-    var programasAdmin = ["Banco de Alimentos ✪", "Banco de Medicamentos ✪", "Cáritas Parroquiales ✪"]
+    var programasAdmin = [ProgramaElement]()
     @IBOutlet var programaAdminTableView: UITableView!
     
     override func viewDidLoad() {
@@ -54,10 +54,11 @@ class programasAdminTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = programaAdminTableView.dequeueReusableCell(withIdentifier: "programasAdminCell", for: indexPath) as! ProgramasAdminTVC
-        let programas_Admin = programasAdmin[indexPath.row]
+        let programa_Admin = programasAdmin[indexPath.row]
+        cell.programasAdminLbl?.text = programa_Admin.nombrePrograma.capitalized
         
-        cell.programasAdminLbl.text = programas_Admin
-        cell.programasAdminImgView.image = UIImage(named: programas_Admin)
+        //cell.programasAdminLbl.text = programa_Admin
+        //cell.programasAdminImgView.image = UIImage(named: programa_Admin)
         
         
         //make cell look good
@@ -90,7 +91,7 @@ class programasAdminTableViewController: UITableViewController {
             let submitBtn = UIAlertAction(title: "Agregar", style: .default, handler: {_ in
                 
                 let textObj = vc.textFields![0]
-                self.programasAdmin.insert(textObj.text!, at: indexPath.row)
+                //self.programa_Admin.insert(textObj.text!, at: indexPath.row)
                 self.tableView.insertRows(at: [indexPath], with: .fade)
                 tableView.endUpdates()
                 
@@ -124,27 +125,17 @@ class programasAdminTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    func llamadaAPI_Login() ->Bool{
-        var emailBuscar = ""
-        var contra = ""
-        var idUsuario = 0
-        var nombreCompleto = ""
-        
-        var loginExitoso = false
-        var notificacion = ""
+    func consultaProgramaAPI() {
         
         // CHECA SI HAY ESPACIOS VACIOS
 
         //INICIA API
-        guard let url = URL(string:"https://equipo05.tc2007b.tec.mx:10210/usuarios/login?emailUsuarios=\(emailBuscar)")
-        else {
-            return loginExitoso
-        }
+        let url = URL(string:"https://equipo05.tc2007b.tec.mx:10210/programa/consultar?matriculaAdmin=1")
         
         let grupo = DispatchGroup()
         grupo.enter()
     
-        let task = URLSession.shared.dataTask(with: url){
+        let task = URLSession.shared.dataTask(with: url!){
             data, response, error in
             
             /*
@@ -159,13 +150,13 @@ class programasAdminTableViewController: UITableViewController {
                     do{
                 let tasks = try decoder.decode([Programa].self, from: data)
                 if (!tasks.isEmpty){
+                    //aqui se desglosa
                     tasks.forEach{ i in
-                        //aqui se desglosa
-                        
+                        //programasAdminLbl.text = "\(i.descripcionHorario)"
                     }
                 }else{
                     //respuestaUsuario = "Usuario NO Encontrado"
-                    notificacion = "Usuario no encontrado"
+                    print("Programas no asignados administrador")
                 }
             }catch{
                 print(error)
@@ -177,12 +168,6 @@ class programasAdminTableViewController: UITableViewController {
             task.resume()
         
             grupo.wait()
-            if notificacion != ""{
-                alertas(titulo: "Aviso", texto: notificacion)
-            }
-            
-            //lbRespuesta.text = respuestaUsuario
-            return loginExitoso
     }
 
 }
