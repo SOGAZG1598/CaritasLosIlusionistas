@@ -14,3 +14,4 @@ struct AdminElement: Codable {
 }
 
 typealias Admin = [AdminElement]
+

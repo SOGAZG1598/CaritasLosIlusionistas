@@ -1,5 +1,5 @@
 //
-//  programasAdminTableViewController.swift
+//  listaProgramasAdminTableViewController.swift
 //  CaritasLosIlusionistas
 //
 //  Created by Sebastián Jaiovi on 28/09/22.
@@ -8,10 +8,12 @@
 import UIKit
 
 class programasAdminTableViewController: UITableViewController {
+    let defaults = UserDefaults.standard
     
+    var listaProgramasAdmin = [ProgramaElement]()
+    @IBOutlet var programaAdminTableView: UITableView!
     
     var programasAdmin = ["Banco de Alimentos ✪", "Banco de Medicamentos ✪", "Cáritas Parroquiales ✪"]
-    @IBOutlet var programaAdminTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class programasAdminTableViewController: UITableViewController {
         
         programaAdminTableView.separatorStyle = .none
         programaAdminTableView.showsVerticalScrollIndicator = false
+        
+        llamadaAPI_Login()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,17 +52,21 @@ class programasAdminTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        //return programasAdmin.count
         return programasAdmin.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = programaAdminTableView.dequeueReusableCell(withIdentifier: "programasAdminCell", for: indexPath) as! ProgramasAdminTVC
-        let programas_Admin = programasAdmin[indexPath.row]
+        //let programas_Admin = programasAdmin[indexPath.row]
+        let programaX = listaProgramasAdmin[indexPath.row]
         
-        cell.programasAdminLbl.text = programas_Admin
-        cell.programasAdminImgView.image = UIImage(named: programas_Admin)
+        //cell.programasAdminLbl.text = programas_Admin
+        //cell.programasAdminImgView.image = UIImage(named: programas_Admin)
         
+        cell.programasAdminLbl.text = programaX.nombrePrograma
+        //cell.programasAdminImgView.image = UIImage(named: programas_Admin)
         
         //make cell look good
         
@@ -72,8 +80,8 @@ class programasAdminTableViewController: UITableViewController {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
-    // Override to support editing the table view.
+    /*
+    // Override to support editing the table view. ANADIR USUARIO DEPRECATED
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
@@ -100,6 +108,7 @@ class programasAdminTableViewController: UITableViewController {
         }
         
     }
+     */
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -124,26 +133,15 @@ class programasAdminTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    func llamadaAPI_Login() ->Bool{
-        var emailBuscar = ""
-        var contra = ""
-        var idUsuario = 0
-        var nombreCompleto = ""
-        
-        var loginExitoso = false
+    func llamadaAPI_Login(){
         var notificacion = ""
+        let matriculaAdmin = defaults.string(forKey: "idUsuarios")!
+        guard let url = URL(string: "https://equipo05.tc2007b.tec.mx:10210/programa/consultar?matriculaAdmin=\(matriculaAdmin)")
+        else{ return }
         
-        // CHECA SI HAY ESPACIOS VACIOS
+        let group = DispatchGroup()
+        group.enter()
 
-        //INICIA API
-        guard let url = URL(string:"https://equipo05.tc2007b.tec.mx:10210/usuarios/login?emailUsuarios=\(emailBuscar)")
-        else {
-            return loginExitoso
-        }
-        
-        let grupo = DispatchGroup()
-        grupo.enter()
-    
         let task = URLSession.shared.dataTask(with: url){
             data, response, error in
             
@@ -154,35 +152,39 @@ class programasAdminTableViewController: UITableViewController {
              */
             
         let decoder = JSONDecoder()
-
-                if let data = data{
-                    do{
-                let tasks = try decoder.decode([Programa].self, from: data)
-                if (!tasks.isEmpty){
-                    tasks.forEach{ i in
-                        //aqui se desglosa
-                        
+                    if let data = data{
+                        do{
+                            let tasks = try decoder.decode([ProgramaElement].self, from: data)
+                            if (!tasks.isEmpty){
+                                tasks.forEach{ i in print("\(i.nombrePrograma)") }
+                                print("Si hay datos!")
+                            }else{
+                                notificacion = "No hay programas asignados al admin"
+                            }
+                            
+                            //manda a guardar los datos a la lista
+                            self.listaProgramasAdmin = tasks
+                        }catch{
+                            print(error)
+                        }
                     }
-                }else{
-                    //respuestaUsuario = "Usuario NO Encontrado"
-                    notificacion = "Usuario no encontrado"
-                }
-            }catch{
-                print(error)
-            }
-            }
-            grupo.leave()
+                group.leave()
             }
 
             task.resume()
         
-            grupo.wait()
+            group.wait()
             if notificacion != ""{
                 alertas(titulo: "Aviso", texto: notificacion)
             }
-            
-            //lbRespuesta.text = respuestaUsuario
-            return loginExitoso
+        programaAdminTableView.reloadData()
+    }
+    
+    func alertas(titulo:String , texto:String) ->Void{
+        let alerta = UIAlertController(title:titulo, message: texto, preferredStyle: .alert)
+        let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alerta.addAction(botonCancel)
+        present(alerta, animated: true)
     }
 
 }
