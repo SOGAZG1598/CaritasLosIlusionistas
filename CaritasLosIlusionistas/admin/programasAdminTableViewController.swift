@@ -53,7 +53,7 @@ class programasAdminTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return programasAdmin.count
-        return programasAdmin.count
+        return listaProgramasAdmin.count
     }
 
     
