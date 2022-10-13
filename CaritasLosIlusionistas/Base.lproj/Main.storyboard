@@ -1428,10 +1428,10 @@
         <image name="PruebaWWP3" width="1500" height="2668"/>
         <image name="logoCaritas" width="318" height="158"/>
         <image name="logoCaritas-removebg-preview" width="318" height="158"/>
-        <image name="menucard.fill" catalog="system" width="106" height="128"/>
-        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="113"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
+        <image name="menucard.fill" catalog="system" width="32" height="32"/>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
+        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="32" height="32"/>
         <namedColor name="AzulCaritas">
             <color red="0.0" green="0.23137254901960785" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -1,5 +1,5 @@
 //
-//  programasAdminTableViewController.swift
+//  listaProgramasAdminTableViewController.swift
 //  CaritasLosIlusionistas
 //
 //  Created by Sebastián Jaiovi on 28/09/22.
@@ -8,10 +8,12 @@
 import UIKit
 
 class programasAdminTableViewController: UITableViewController {
+    let defaults = UserDefaults.standard
     
-    
-    var programasAdmin = [ProgramaElement]()
+    var listaProgramasAdmin = [ProgramaElement]()
     @IBOutlet var programaAdminTableView: UITableView!
+    
+    var programasAdmin = ["Banco de Alimentos ✪", "Banco de Medicamentos ✪", "Cáritas Parroquiales ✪"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class programasAdminTableViewController: UITableViewController {
         
         programaAdminTableView.separatorStyle = .none
         programaAdminTableView.showsVerticalScrollIndicator = false
+        
+        llamadaAPI_Login()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,18 +52,21 @@ class programasAdminTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return programasAdmin.count
+        //return programasAdmin.count
+        return listaProgramasAdmin.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = programaAdminTableView.dequeueReusableCell(withIdentifier: "programasAdminCell", for: indexPath) as! ProgramasAdminTVC
-        let programa_Admin = programasAdmin[indexPath.row]
-        cell.programasAdminLbl?.text = programa_Admin.nombrePrograma.capitalized
+        //let programas_Admin = programasAdmin[indexPath.row]
+        let programaX = listaProgramasAdmin[indexPath.row]
         
-        //cell.programasAdminLbl.text = programa_Admin
-        //cell.programasAdminImgView.image = UIImage(named: programa_Admin)
+        //cell.programasAdminLbl.text = programas_Admin
+        //cell.programasAdminImgView.image = UIImage(named: programas_Admin)
         
+        cell.programasAdminLbl.text = programaX.nombrePrograma
+        //cell.programasAdminImgView.image = UIImage(named: programas_Admin)
         
         //make cell look good
         
@@ -73,8 +80,8 @@ class programasAdminTableViewController: UITableViewController {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
-    // Override to support editing the table view.
+    /*
+    // Override to support editing the table view. ANADIR USUARIO DEPRECATED
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
@@ -91,7 +98,7 @@ class programasAdminTableViewController: UITableViewController {
             let submitBtn = UIAlertAction(title: "Agregar", style: .default, handler: {_ in
                 
                 let textObj = vc.textFields![0]
-                //self.programa_Admin.insert(textObj.text!, at: indexPath.row)
+                self.programasAdmin.insert(textObj.text!, at: indexPath.row)
                 self.tableView.insertRows(at: [indexPath], with: .fade)
                 tableView.endUpdates()
                 
@@ -101,6 +108,7 @@ class programasAdminTableViewController: UITableViewController {
         }
         
     }
+     */
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -125,17 +133,16 @@ class programasAdminTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    func consultaProgramaAPI() {
+    func llamadaAPI_Login(){
+        var notificacion = ""
+        let matriculaAdmin = defaults.string(forKey: "idUsuarios")!
+        guard let url = URL(string: "https://equipo05.tc2007b.tec.mx:10210/programa/consultar?matriculaAdmin=\(matriculaAdmin)")
+        else{ return }
         
-        // CHECA SI HAY ESPACIOS VACIOS
+        let group = DispatchGroup()
+        group.enter()
 
-        //INICIA API
-        let url = URL(string:"https://equipo05.tc2007b.tec.mx:10210/programa/consultar?matriculaAdmin=1")
-        
-        let grupo = DispatchGroup()
-        grupo.enter()
-    
-        let task = URLSession.shared.dataTask(with: url!){
+        let task = URLSession.shared.dataTask(with: url){
             data, response, error in
             
             /*
@@ -145,29 +152,39 @@ class programasAdminTableViewController: UITableViewController {
              */
             
         let decoder = JSONDecoder()
-
-                if let data = data{
-                    do{
-                let tasks = try decoder.decode([Programa].self, from: data)
-                if (!tasks.isEmpty){
-                    //aqui se desglosa
-                    tasks.forEach{ i in
-                        //programasAdminLbl.text = "\(i.descripcionHorario)"
+                    if let data = data{
+                        do{
+                            let tasks = try decoder.decode([ProgramaElement].self, from: data)
+                            if (!tasks.isEmpty){
+                                tasks.forEach{ i in print("\(i.nombrePrograma)") }
+                                print("Si hay datos!")
+                            }else{
+                                notificacion = "No hay programas asignados al admin"
+                            }
+                            
+                            //manda a guardar los datos a la lista
+                            self.listaProgramasAdmin = tasks
+                        }catch{
+                            print(error)
+                        }
                     }
-                }else{
-                    //respuestaUsuario = "Usuario NO Encontrado"
-                    print("Programas no asignados administrador")
-                }
-            }catch{
-                print(error)
-            }
-            }
-            grupo.leave()
+                group.leave()
             }
 
             task.resume()
         
-            grupo.wait()
+            group.wait()
+            if notificacion != ""{
+                alertas(titulo: "Aviso", texto: notificacion)
+            }
+        programaAdminTableView.reloadData()
+    }
+    
+    func alertas(titulo:String , texto:String) ->Void{
+        let alerta = UIAlertController(title:titulo, message: texto, preferredStyle: .alert)
+        let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alerta.addAction(botonCancel)
+        present(alerta, animated: true)
     }
 
 }
