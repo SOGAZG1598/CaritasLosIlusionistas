@@ -15,6 +15,10 @@ class ProgramasAdminTVC: UITableViewCell {
     
     @IBOutlet weak var programasAdminLbl: UILabel!
     
+    @IBOutlet weak var horarioLbl: UILabel!
+    
+    @IBOutlet weak var ubicacionLbl: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

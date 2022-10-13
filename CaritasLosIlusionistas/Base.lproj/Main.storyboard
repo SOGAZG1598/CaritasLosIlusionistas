@@ -877,16 +877,30 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOK-Bl-8FE">
                                             <rect key="frame" x="16" y="11" width="343" height="78"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banco de Alimentos-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qux-wm-Ga2">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banco de alimentos" translatesAutoresizingMaskIntoConstraints="NO" id="Qux-wm-Ga2">
                                                     <rect key="frame" x="10" y="9" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="7k9-XB-17m"/>
                                                         <constraint firstAttribute="height" constant="60" id="x64-fx-44U"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banco de Alimentos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-nw-YrH">
-                                                    <rect key="frame" x="80" y="10" width="253" height="58"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnZ-g9-lX0">
+                                                    <rect key="frame" x="78" y="57" width="140" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ca-FI-OU5">
+                                                    <rect key="frame" x="204" y="57" width="120" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Banco de Alimentos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-nw-YrH">
+                                                    <rect key="frame" x="71" y="12" width="253" height="58"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -910,9 +924,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="horarioLbl" destination="HnZ-g9-lX0" id="Ogb-Ui-dDW"/>
                                     <outlet property="programasAdminImgView" destination="Qux-wm-Ga2" id="Igd-O7-sqn"/>
                                     <outlet property="programasAdminLbl" destination="d2b-nw-YrH" id="pGh-A0-po8"/>
                                     <outlet property="programasAdminView" destination="fOK-Bl-8FE" id="W9P-wU-BM5"/>
+                                    <outlet property="ubicacionLbl" destination="6Ca-FI-OU5" id="7xg-HL-Wnb"/>
                                     <segue destination="3Ft-29-pCq" kind="show" id="UDb-lc-dEh"/>
                                 </connections>
                             </tableViewCell>
@@ -1421,17 +1437,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Banco de Alimentos-1" width="612" height="612"/>
         <image name="Banco de alimentos" width="612" height="612"/>
         <image name="Clark Kent" width="612" height="612"/>
         <image name="Fondo Perfil Usuario (1)" width="1500" height="2668"/>
         <image name="PruebaWWP3" width="1500" height="2668"/>
         <image name="logoCaritas" width="318" height="158"/>
         <image name="logoCaritas-removebg-preview" width="318" height="158"/>
-        <image name="menucard.fill" catalog="system" width="32" height="32"/>
-        <image name="person.crop.circle.badge.plus" catalog="system" width="32" height="32"/>
-        <image name="person.fill" catalog="system" width="32" height="32"/>
-        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="32" height="32"/>
+        <image name="menucard.fill" catalog="system" width="106" height="128"/>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="113"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
         <namedColor name="AzulCaritas">
             <color red="0.0" green="0.23137254901960785" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

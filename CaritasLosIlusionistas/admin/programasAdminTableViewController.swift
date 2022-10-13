@@ -66,7 +66,9 @@ class programasAdminTableViewController: UITableViewController {
         //cell.programasAdminImgView.image = UIImage(named: programas_Admin)
         
         cell.programasAdminLbl.text = programaX.nombrePrograma
-        //cell.programasAdminImgView.image = UIImage(named: programas_Admin)
+        cell.horarioLbl.text = programaX.descripcionHorario
+        cell.ubicacionLbl.text = programaX.ubicacion
+        cell.programasAdminImgView.image = UIImage(named: programaX.nombrePrograma)
         
         //make cell look good
         
@@ -156,7 +158,10 @@ class programasAdminTableViewController: UITableViewController {
                         do{
                             let tasks = try decoder.decode([ProgramaElement].self, from: data)
                             if (!tasks.isEmpty){
-                                tasks.forEach{ i in print("\(i.nombrePrograma)") }
+                                tasks.forEach{ i in print("\(i.nombrePrograma)")
+                                    print(" \(i.ubicacion)" )
+                                    print(" \(i.descripcionHorario)" )
+                                }
                                 print("Si hay datos!")
                             }else{
                                 notificacion = "No hay programas asignados al admin"

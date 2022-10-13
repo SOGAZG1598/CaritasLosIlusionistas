@@ -9,8 +9,9 @@ import UIKit
 
 class programasUsuarioTableViewController: UITableViewController{
     
+    let defaults = UserDefaults.standard
     
-    var programas = ["Banco de alimentos", "Banco de medicamentos", "Cáritas parroquiales"]
+    var listaProgramasVol = [ProgramaVolElement]()
 
     @IBOutlet var programTableView: UITableView!
     
@@ -28,7 +29,7 @@ class programasUsuarioTableViewController: UITableViewController{
         programTableView.separatorStyle = .none
         programTableView.showsVerticalScrollIndicator = false
         
-        
+        llamadaAPI_Login()
         
     }
 
@@ -46,16 +47,16 @@ class programasUsuarioTableViewController: UITableViewController{
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return programas.count
+        return listaProgramasVol.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = programTableView.dequeueReusableCell(withIdentifier: "programCell", for: indexPath) as! ProgramasTVC
-        let programas = programas[indexPath.row]
+        let programaY = listaProgramasVol[indexPath.row]
         
-        cell.programLbl.text = programas
-        cell.programasImgView.image = UIImage(named: programas)
+        cell.programLbl.text = String(programaY.idPrograma)
+        //cell.programasImgView.image = UIIdmage(named: programas)
 
         
         //Make cell look good
@@ -112,7 +113,64 @@ class programasUsuarioTableViewController: UITableViewController{
         // Pass the selected object to the new view controller.
     }
     */
+    func llamadaAPI_Login(){
+        var notificacion = ""
+        let matricula = defaults.string(forKey: "idUsuarios")!
+        guard let url = URL(string: "https://equipo05.tc2007b.tec.mx:10210/conexion/consultar?matricula=\(matricula)")
+        else{ return }
+        
+        let group = DispatchGroup()
+        group.enter()
 
-}
+        let task = URLSession.shared.dataTask(with: url){
+            data, response, error in
+            
+            /*
+            if let data = data, let string = String(data: data, encoding: .utf8){
+                print(string)
+            }
+             */
+            
+        let decoder = JSONDecoder()
+                    if let data = data{
+                        do{
+                            let tasks = try decoder.decode([ProgramaVolElement].self, from: data)
+                            if (!tasks.isEmpty){
+                                tasks.forEach{ i in print("\(i.idPrograma)") }
+                                print("Si hay datos!")
+                            }else{
+                                notificacion = "No hay programas asignados al admin"
+                            }
+                            
+                            //manda a guardar los datos a la lista
+                            self.listaProgramasVol = tasks
+                        }catch{
+                            print(error)
+                        }
+                    }
+                group.leave()
+            }
+
+            task.resume()
+        
+            group.wait()
+            if notificacion != ""{
+                alertas(titulo: "Aviso", texto: notificacion)
+            }
+        programTableView.reloadData()
+    }
+
+    func alertas(titulo:String , texto:String) ->Void{
+        let alerta = UIAlertController(title:titulo, message: texto, preferredStyle: .alert)
+        let botonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alerta.addAction(botonCancel)
+        present(alerta, animated: true)
+    }
+
+    }
+
+
+
+
 
 
