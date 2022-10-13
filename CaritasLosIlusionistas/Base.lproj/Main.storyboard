@@ -34,7 +34,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="rectangle.portrait.and.arrow.right.fill" catalog="system">
-                                    <color key="baseBackgroundColor" name="MoradoCaritas"/>
+                                    <color key="baseBackgroundColor" name="GrisCaritas"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="LogOut:" destination="qSJ-9y-qsc" eventType="touchUpInside" id="dOM-W4-du8"/>
@@ -48,7 +48,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Editar" subtitle="" cornerStyle="large" titleAlignment="center">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="MoradoCaritas"/>
+                                        <color key="backgroundColor" name="GrisCaritas"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
@@ -574,10 +574,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="459-Oy-tpd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2do Paso  Registro de Administrador" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRh-Pd-orW">
                                 <rect key="frame" x="25" y="44" width="278" height="50.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
@@ -648,10 +644,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4g-Tl-y5l">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-pl-DGK">
                                 <rect key="frame" x="86" y="411" width="203" height="50"/>
                                 <constraints>
@@ -852,7 +844,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="person.crop.circle.badge.plus" catalog="system">
-                                    <color key="baseForegroundColor" name="NaranjaCaritas"/>
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
                                 </buttonConfiguration>
                             </button>
                         </barButtonItem>
@@ -965,7 +957,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Editar" subtitle="" cornerStyle="large" titleAlignment="center">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="MoradoCaritas"/>
+                                        <color key="backgroundColor" name="GrisCaritas"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
@@ -979,13 +971,13 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="rectangle.portrait.and.arrow.right.fill" catalog="system">
-                                    <color key="baseBackgroundColor" name="MoradoCaritas"/>
+                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="cerrarSesionBoton:" destination="8LG-C4-23Z" eventType="touchUpInside" id="Pm8-su-dtA"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bruce Wayne" translatesAutoresizingMaskIntoConstraints="NO" id="PTs-xY-IDK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clark Kent" translatesAutoresizingMaskIntoConstraints="NO" id="PTs-xY-IDK">
                                 <rect key="frame" x="68" y="68" width="238" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1265,93 +1257,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JG1-ie-QkN">
-                                <rect key="frame" x="67" y="113" width="240" height="233"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="233" id="JMA-4P-xkn"/>
-                                    <constraint firstAttribute="width" constant="240" id="OlR-5d-Klz"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-IM-QTi">
-                                <rect key="frame" x="126" y="373" width="123" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="z2q-Td-LY8"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-IM-QTi">
+                                <rect key="frame" x="103" y="521" width="169" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Generar QR" cornerStyle="large">
-                                    <color key="baseBackgroundColor" name="MoradoCaritas"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Registrar Asistencia " cornerStyle="large">
+                                    <color key="baseBackgroundColor" name="GrisCaritas"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRS-lO-7PJ">
-                                <rect key="frame" x="156" y="455" width="69" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora de entrada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MQ-3c-XQI">
-                                <rect key="frame" x="24" y="507" width="201" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="O0p-d9-NoA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora de salida:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1j-l9-efX">
-                                <rect key="frame" x="24" y="562" width="179" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="NRg-wt-wCu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJs-f4-2MH">
-                                <rect key="frame" x="235" y="507" width="106" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="fjC-hj-H2W"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fp-rP-rGL">
-                                <rect key="frame" x="213" y="562" width="106" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Z9R-qd-J8x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Joo-bf-5FW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JG1-ie-QkN" firstAttribute="leading" secondItem="Joo-bf-5FW" secondAttribute="leading" constant="67" id="05U-QR-yzf"/>
-                            <constraint firstItem="fRS-lO-7PJ" firstAttribute="top" secondItem="NRW-IM-QTi" secondAttribute="bottom" constant="32" id="3s8-vy-Vgz"/>
-                            <constraint firstItem="4Fp-rP-rGL" firstAttribute="top" secondItem="QJs-f4-2MH" secondAttribute="bottom" constant="23" id="57x-BY-mlN"/>
                             <constraint firstItem="Joo-bf-5FW" firstAttribute="trailing" secondItem="uge-ZW-dwd" secondAttribute="trailing" constant="122" id="7mm-WI-xTN"/>
-                            <constraint firstItem="Joo-bf-5FW" firstAttribute="trailing" secondItem="fRS-lO-7PJ" secondAttribute="trailing" constant="150" id="8Ed-Pw-fzb"/>
-                            <constraint firstItem="QJs-f4-2MH" firstAttribute="leading" secondItem="3MQ-3c-XQI" secondAttribute="trailing" constant="10" id="8TR-ds-J4y"/>
-                            <constraint firstItem="Joo-bf-5FW" firstAttribute="bottom" secondItem="4Fp-rP-rGL" secondAttribute="bottom" constant="24" id="J3d-2U-ORt"/>
-                            <constraint firstItem="NRW-IM-QTi" firstAttribute="leading" secondItem="Joo-bf-5FW" secondAttribute="leading" constant="126" id="JcS-fK-4JK"/>
-                            <constraint firstItem="Joo-bf-5FW" firstAttribute="trailing" secondItem="NRW-IM-QTi" secondAttribute="trailing" constant="126" id="Lb0-13-KxF"/>
-                            <constraint firstItem="fRS-lO-7PJ" firstAttribute="leading" secondItem="Joo-bf-5FW" secondAttribute="leading" constant="156" id="LeX-Cl-JZo"/>
-                            <constraint firstItem="3MQ-3c-XQI" firstAttribute="top" secondItem="fRS-lO-7PJ" secondAttribute="bottom" constant="20" id="RGl-VC-rbH"/>
-                            <constraint firstItem="t1j-l9-efX" firstAttribute="leading" secondItem="Joo-bf-5FW" secondAttribute="leading" constant="24" id="SCs-QJ-Kct"/>
-                            <constraint firstItem="3MQ-3c-XQI" firstAttribute="leading" secondItem="Joo-bf-5FW" secondAttribute="leading" constant="24" id="Smn-90-jn2"/>
-                            <constraint firstItem="JG1-ie-QkN" firstAttribute="top" secondItem="uge-ZW-dwd" secondAttribute="bottom" constant="19" id="WDc-IF-2NS"/>
-                            <constraint firstItem="Joo-bf-5FW" firstAttribute="trailing" secondItem="QJs-f4-2MH" secondAttribute="trailing" constant="34" id="Wv8-sg-869"/>
                             <constraint firstItem="uge-ZW-dwd" firstAttribute="leading" secondItem="Joo-bf-5FW" secondAttribute="leading" constant="121" id="YaB-tv-lT7"/>
-                            <constraint firstItem="Joo-bf-5FW" firstAttribute="trailing" secondItem="4Fp-rP-rGL" secondAttribute="trailing" constant="56" id="Zfx-Re-5ii"/>
-                            <constraint firstItem="NRW-IM-QTi" firstAttribute="top" secondItem="JG1-ie-QkN" secondAttribute="bottom" constant="27" id="bP0-ns-YQP"/>
-                            <constraint firstItem="t1j-l9-efX" firstAttribute="top" secondItem="3MQ-3c-XQI" secondAttribute="bottom" constant="25" id="e8O-Ak-gj2"/>
                             <constraint firstItem="uge-ZW-dwd" firstAttribute="top" secondItem="Joo-bf-5FW" secondAttribute="top" constant="16" id="eT8-HY-BNZ"/>
-                            <constraint firstItem="QJs-f4-2MH" firstAttribute="top" secondItem="NRW-IM-QTi" secondAttribute="bottom" constant="84" id="iAb-Uf-h7K"/>
-                            <constraint firstItem="Joo-bf-5FW" firstAttribute="trailing" secondItem="JG1-ie-QkN" secondAttribute="trailing" constant="68" id="nPc-oF-zjU"/>
-                            <constraint firstItem="4Fp-rP-rGL" firstAttribute="leading" secondItem="t1j-l9-efX" secondAttribute="trailing" constant="10" id="tXF-Iq-Fdn"/>
-                            <constraint firstItem="Joo-bf-5FW" firstAttribute="bottom" secondItem="t1j-l9-efX" secondAttribute="bottom" constant="26" id="yP2-YA-dsl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Rad-VI-rEG"/>
@@ -1368,7 +1288,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="NaranjaCaritas"/>
+                        <color key="selectedImageTintColor" name="CelesteCaritas"/>
                     </tabBar>
                     <connections>
                         <segue destination="8LG-C4-23Z" kind="relationship" relationship="viewControllers" id="0lI-LT-0u0"/>
@@ -1388,6 +1308,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xA8-Ei-AlY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="CelesteCaritas"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1407,6 +1328,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WDm-b1-gDf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="CelesteCaritas"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1501,7 +1423,6 @@
     <resources>
         <image name="Banco de Alimentos-1" width="612" height="612"/>
         <image name="Banco de alimentos" width="612" height="612"/>
-        <image name="Bruce Wayne" width="612" height="612"/>
         <image name="Clark Kent" width="612" height="612"/>
         <image name="Fondo Perfil Usuario (1)" width="1500" height="2668"/>
         <image name="PruebaWWP3" width="1500" height="2668"/>
@@ -1517,14 +1438,11 @@
         <namedColor name="CelesteCaritas">
             <color red="0.0" green="0.5607843137254902" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="GrisCaritas">
+            <color red="0.53299999237060547" green="0.54500001668930054" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GrisLightCaritas">
             <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="MoradoCaritas">
-            <color red="0.57300001382827759" green="0.33700001239776611" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="NaranjaCaritas">
-            <color red="0.93300002813339233" green="0.49399998784065247" blue="0.25499999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1540,6 +1458,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
