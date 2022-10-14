@@ -22,8 +22,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesus Eduardo Martinez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-eY-wKw">
-                                <rect key="frame" x="27" y="349" width="320" height="32.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                <rect key="frame" x="27" y="356" width="320" height="25.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <color key="textColor" name="AzulCaritas"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -48,7 +48,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Editar" subtitle="" cornerStyle="large" titleAlignment="center">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="GrisCaritas"/>
+                                        <color key="backgroundColor" name="CelesteCaritas"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
@@ -521,8 +521,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCf-YB-l1V">
-                                <rect key="frame" x="86" y="518.5" width="203" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCf-YB-l1V">
+                                <rect key="frame" x="54" y="519" width="254" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="n27-Yb-eyM"/>
                                 </constraints>
@@ -582,8 +582,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V49-eh-GZ7">
-                                <rect key="frame" x="86" y="204" width="203" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V49-eh-GZ7">
+                                <rect key="frame" x="76" y="198" width="227" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Oo8-Yl-tDX"/>
                                 </constraints>
@@ -646,8 +646,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-pl-DGK">
-                                <rect key="frame" x="86" y="411" width="203" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-pl-DGK">
+                                <rect key="frame" x="75" y="406" width="222" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="T6s-Fu-Fj8"/>
                                 </constraints>
@@ -879,7 +879,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOK-Bl-8FE">
                                             <rect key="frame" x="16" y="11" width="343" height="78"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banco de alimentos" translatesAutoresizingMaskIntoConstraints="NO" id="Qux-wm-Ga2">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banco de Alimentos" translatesAutoresizingMaskIntoConstraints="NO" id="Qux-wm-Ga2">
                                                     <rect key="frame" x="10" y="9" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="7k9-XB-17m"/>
@@ -900,8 +900,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Banco de Alimentos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-nw-YrH">
-                                                    <rect key="frame" x="71" y="12" width="253" height="58"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Banco de Alimentos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-nw-YrH">
+                                                    <rect key="frame" x="71" y="5" width="253" height="58"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -962,8 +962,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesus Eduardo Martinez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAK-wo-Ayx">
-                                <rect key="frame" x="27" y="357" width="312" height="32.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
+                                <rect key="frame" x="27" y="363" width="312" height="26.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" name="AzulCaritas"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -975,7 +975,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Editar" subtitle="" cornerStyle="large" titleAlignment="center">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="GrisCaritas"/>
+                                        <color key="backgroundColor" name="CelesteCaritas"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
@@ -1048,17 +1048,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYq-G9-qjx">
-                                <rect key="frame" x="95" y="562" width="203" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="CelesteCaritas"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
-                                <connections>
-                                    <action selector="guardarBoton:" destination="eaz-Uh-BCl" eventType="touchUpInside" id="b40-Pc-d8k"/>
-                                    <action selector="registroPrimeroAccion:" destination="ZMJ-QM-kb8" eventType="touchUpInside" id="924-t9-rXo"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eNr-kh-luS">
                                 <rect key="frame" x="15" y="125.5" width="345" height="378"/>
                                 <subviews>
@@ -1154,6 +1143,17 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYq-G9-qjx">
+                                <rect key="frame" x="75" y="537" width="224" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="CelesteCaritas"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Guardar"/>
+                                <connections>
+                                    <action selector="guardarBoton:" destination="eaz-Uh-BCl" eventType="touchUpInside" id="b40-Pc-d8k"/>
+                                    <action selector="registroPrimeroAccion:" destination="ZMJ-QM-kb8" eventType="touchUpInside" id="924-t9-rXo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bd5-EB-7nD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1182,7 +1182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXr-m0-sck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="501"/>
+            <point key="canvasLocation" x="104.8" y="500.59970014992507"/>
         </scene>
         <!--Programas Usuario Table View Controller-->
         <scene sceneID="1aI-95-JHp">
@@ -1194,47 +1194,47 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" name="CelesteCaritas"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="programCell" rowHeight="100" id="LUn-5W-kgd" customClass="ProgramasTVC" customModule="CaritasLosIlusionistas" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="programCell" rowHeight="118" id="LUn-5W-kgd" customClass="ProgramasTVC" customModule="CaritasLosIlusionistas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LUn-5W-kgd" id="XeA-WL-yXq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g10-cx-LzT">
-                                            <rect key="frame" x="16" y="11" width="343" height="78"/>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g10-cx-LzT">
+                                            <rect key="frame" x="16" y="11" width="343" height="77"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banco de Alimentos" translatesAutoresizingMaskIntoConstraints="NO" id="Ox1-BB-n4r">
-                                                    <rect key="frame" x="10" y="9" width="60" height="60"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Banco de Alimentos" translatesAutoresizingMaskIntoConstraints="NO" id="Ox1-BB-n4r">
+                                                    <rect key="frame" x="8" y="8" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="cDf-x5-yPH"/>
                                                         <constraint firstAttribute="height" constant="60" id="zEH-Sr-IRw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banco de Alimentos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeE-eD-TuF">
-                                                    <rect key="frame" x="80" y="10" width="253" height="58"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2g-r0-fIZ">
+                                                    <rect key="frame" x="143" y="54" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEH-lz-Bnx">
+                                                    <rect key="frame" x="215" y="54" width="120" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Banco de Alimentos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeE-eD-TuF">
+                                                    <rect key="frame" x="82" y="21" width="221" height="33"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLv-a4-FoV">
-                                                    <rect key="frame" x="60" y="57" width="90" height="21"/>
+                                                    <rect key="frame" x="76" y="54" width="59" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2g-r0-fIZ">
-                                                    <rect key="frame" x="158" y="57" width="106" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEH-lz-Bnx">
-                                                    <rect key="frame" x="264" y="57" width="79" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1253,8 +1253,12 @@
                                     <constraints>
                                         <constraint firstItem="g10-cx-LzT" firstAttribute="leading" secondItem="XeA-WL-yXq" secondAttribute="leadingMargin" id="3lO-j5-gkW"/>
                                         <constraint firstItem="g10-cx-LzT" firstAttribute="top" secondItem="XeA-WL-yXq" secondAttribute="topMargin" id="7Mq-Nk-hX4"/>
+                                        <constraint firstItem="g10-cx-LzT" firstAttribute="bottom" secondItem="XeA-WL-yXq" secondAttribute="bottomMargin" id="GFh-tY-r5R"/>
                                         <constraint firstItem="g10-cx-LzT" firstAttribute="bottom" secondItem="XeA-WL-yXq" secondAttribute="bottomMargin" id="MVu-qg-vsa"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="g10-cx-LzT" secondAttribute="trailing" id="SNc-3G-bwT"/>
+                                        <constraint firstItem="g10-cx-LzT" firstAttribute="leading" secondItem="XeA-WL-yXq" secondAttribute="leadingMargin" id="gq1-Jd-xRh"/>
+                                        <constraint firstItem="g10-cx-LzT" firstAttribute="top" secondItem="XeA-WL-yXq" secondAttribute="topMargin" id="rJR-hh-l3F"/>
+                                        <constraint firstItem="g10-cx-LzT" firstAttribute="trailing" secondItem="XeA-WL-yXq" secondAttribute="trailingMargin" id="uH2-DH-3Q8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1464,7 +1468,6 @@
     </scenes>
     <resources>
         <image name="Banco de Alimentos" width="612" height="612"/>
-        <image name="Banco de alimentos" width="612" height="612"/>
         <image name="Clark Kent" width="612" height="612"/>
         <image name="Fondo Perfil Usuario (1)" width="1500" height="2668"/>
         <image name="PruebaWWP3" width="1500" height="2668"/>
