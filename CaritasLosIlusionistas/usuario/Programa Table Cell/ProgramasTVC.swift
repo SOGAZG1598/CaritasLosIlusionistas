@@ -16,6 +16,7 @@ class ProgramasTVC: UITableViewCell {
     @IBOutlet weak var programLbl: UILabel!
     @IBOutlet weak var fechaInicio: UILabel!
     @IBOutlet weak var fechaFin: UILabel!
+    @IBOutlet weak var adminLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

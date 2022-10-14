@@ -58,7 +58,8 @@ class programasUsuarioTableViewController: UITableViewController{
         cell.programLbl.text = String(programaY.nombrePrograma)
         cell.fechaInicio.text = String(programaY.fechaInicio)
         cell.fechaFin.text = String(programaY.fechaFin)
-        //cell.programasImgView.image = UIIdmage(named: programas)
+        cell.adminLbl.text = String(programaY.nombreAdmin)
+        cell.programasImgView.image = UIImage(named: programaY.nombrePrograma)
 
         
         //Make cell look good
