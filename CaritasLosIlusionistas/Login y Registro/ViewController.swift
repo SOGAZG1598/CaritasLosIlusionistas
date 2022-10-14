@@ -6,8 +6,16 @@
 //
 
 import UIKit
+import CryptoKit
 
+extension Digest {
+    var bytes: [UInt8] { Array(makeIterator()) }
+    var data: Data { Data(bytes) }
 
+    var hexStr: String {
+        bytes.map { String(format: "%02X", $0) }.joined()
+    }
+}
 
 //ESTE ES EL LOGIN
 class ViewController: UIViewController, UITextFieldDelegate {
@@ -85,9 +93,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                     print("Nombre: \(i.nombreUsuarios)" )
                                     
                                     idUsuario = Int(i.idUsuarios)
-                                    nombreCompleto = "\(i.nombreUsuarios) \(i.apellidoPaterno) \(i.apellidoPaterno)"
+                                    nombreCompleto = "\(i.nombreUsuarios) \(i.apellidoPaterno) \(i.apellidoMaterno)"
                                     
-                                    if(i.passUsuarios == contra){
+                                    let passRAW = "\(contra).caritasPASS"
+                                    print(passRAW)
+                                    let password = self.encripta(password: passRAW)
+                                    print(password)
+                                    
+                                    if(i.passUsuarios == password){
                                         print("Login exitoso")
                                         //METAN TODOS LOS DATOS A DEFAULTS y activarle el segue
                                         self.defineDefaults_Login(id: idUsuario, email: emailBuscar, nombreCompleto: nombreCompleto)
@@ -138,6 +151,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    func encripta(password:String) -> String {
+            guard let data = password.data(using: .utf8) else { return "" }
+            let digest = SHA256.hash(data: data)
+            //print(digest.data) // 32 bytes
+            //print(digest.hexStr) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
+            return digest.hexStr
+        }
     
 }
 

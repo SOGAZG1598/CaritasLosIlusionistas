@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CryptoKit
+
 
 class registroGeneralViewController: UIViewController, UITextFieldDelegate {
     
@@ -54,7 +56,8 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
             if password.count < 8 || curp.count == 19{
                 alertas(titulo: "Aviso", texto: "Espacio con longitud no exacta")
             }else{
-                let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password]
+                let passCrypt = encripta(password: "\(password).caritasPASS")
+                let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": passCrypt]
                 
                 return crearUsuario
             }
@@ -138,5 +141,13 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    func encripta(password:String) -> String {
+            guard let data = password.data(using: .utf8) else { return "" }
+            let digest = SHA256.hash(data: data)
+            //print(digest.data) // 32 bytes
+            //print(digest.hexStr) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
+            return digest.hexStr
+        }
 
 }

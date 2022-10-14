@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CryptoKit
 
 class EditarPerfilUsuarioViewController: UIViewController, UITextFieldDelegate {
 
@@ -57,7 +58,8 @@ class EditarPerfilUsuarioViewController: UIViewController, UITextFieldDelegate {
             if password.count < 8 || curp.count < 18 || telefono.count > 15{
                 alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
             }else{
-                let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": password]
+                let passCrypt = encripta(password: "\(password).caritasPASS")
+                let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": passCrypt]
                 
                 return crearUsuario
             }
@@ -128,6 +130,13 @@ class EditarPerfilUsuarioViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             self.view.endEditing(true)
             return false
+        }
+    func encripta(password:String) -> String {
+            guard let data = password.data(using: .utf8) else { return "" }
+            let digest = SHA256.hash(data: data)
+            //print(digest.data) // 32 bytes
+            //print(digest.hexStr) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
+            return digest.hexStr
         }
 
 }

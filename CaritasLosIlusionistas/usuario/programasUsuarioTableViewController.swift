@@ -7,6 +7,20 @@
 
 import UIKit
 
+extension String {
+    subscript(_ range: CountableRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: max(0, range.lowerBound))
+        let end = index(start, offsetBy: min(self.count - range.lowerBound,
+                                             range.upperBound - range.lowerBound))
+        return String(self[start..<end])
+    }
+
+    subscript(_ range: CountablePartialRangeFrom<Int>) -> String {
+        let start = index(startIndex, offsetBy: max(0, range.lowerBound))
+         return String(self[start...])
+    }
+}
+
 class programasUsuarioTableViewController: UITableViewController{
     
     let defaults = UserDefaults.standard
@@ -55,9 +69,13 @@ class programasUsuarioTableViewController: UITableViewController{
         let cell = programTableView.dequeueReusableCell(withIdentifier: "programCell", for: indexPath) as! ProgramasTVC
         let programaY = listaProgramasVol[indexPath.row]
         
+        let inicio = String(programaY.fechaInicio)
+        let fin = String(programaY.fechaFin)
+        let iniciocorta = inicio[6..<16]
+        let fincorta = fin[6..<16]
         cell.programLbl.text = String(programaY.nombrePrograma)
-        cell.fechaInicio.text = String(programaY.fechaInicio)
-        cell.fechaFin.text = String(programaY.fechaFin)
+        cell.fechaInicio.text = iniciocorta
+        cell.fechaFin.text = fincorta
         cell.adminLbl.text = String(programaY.nombreAdmin)
         cell.programasImgView.image = UIImage(named: programaY.nombrePrograma)
 
