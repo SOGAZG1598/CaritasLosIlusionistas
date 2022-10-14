@@ -14,7 +14,8 @@ class ProgramasTVC: UITableViewCell {
     @IBOutlet weak var programasImgView: UIImageView!
     
     @IBOutlet weak var programLbl: UILabel!
-    
+    @IBOutlet weak var fechaInicio: UILabel!
+    @IBOutlet weak var fechaFin: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

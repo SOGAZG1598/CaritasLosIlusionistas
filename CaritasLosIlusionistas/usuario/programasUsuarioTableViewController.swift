@@ -55,7 +55,9 @@ class programasUsuarioTableViewController: UITableViewController{
         let cell = programTableView.dequeueReusableCell(withIdentifier: "programCell", for: indexPath) as! ProgramasTVC
         let programaY = listaProgramasVol[indexPath.row]
         
-        cell.programLbl.text = String(programaY.idPrograma)
+        cell.programLbl.text = String(programaY.nombrePrograma)
+        cell.fechaInicio.text = String(programaY.fechaInicio)
+        cell.fechaFin.text = String(programaY.fechaFin)
         //cell.programasImgView.image = UIIdmage(named: programas)
 
         

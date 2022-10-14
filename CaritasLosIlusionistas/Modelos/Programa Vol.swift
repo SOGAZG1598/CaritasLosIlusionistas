@@ -9,7 +9,8 @@ import Foundation
 
 struct ProgramaVolElement: Codable {
     let fechaFin, fechaInicio: String
-    let idPrograma, idVoluntarioPrograma, matricula: Int
+    let idPrograma: Int
+    let nombreAdmin, nombrePrograma: String
 }
 
 typealias ProgramaVol = [ProgramaVolElement]
