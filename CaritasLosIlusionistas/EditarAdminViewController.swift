@@ -59,6 +59,8 @@ class EditarAdminViewController: UIViewController, UITextFieldDelegate {
             
             if password.count < 8 || curp.count < 18 || telefono.count > 15{
                 alertas(titulo: "Aviso", texto: "Espacio vacio y/o incorrecto")
+            }else if !validate(password:password){
+                alertas(titulo: "Aviso", texto: "La contraseña debe de tener cada uno de los 4 grupos: Mayúscula, minúscula, num3r0 y carácter  e$pecial!.")
             }else{
                 let passCrypt = encripta(password: "\(password).caritasPASS")
                 let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": passCrypt]
@@ -131,5 +133,22 @@ class EditarAdminViewController: UIViewController, UITextFieldDelegate {
             //print(digest.hexStr) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
             return digest.hexStr
         }
+    
+    //https://stackoverflow.com/a/42929273
+    func validate(password: String) -> Bool {
+        let capitalLetterRegEx  = ".*[A-Z]+.*"
+        let texttest = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
+        guard texttest.evaluate(with: password) else { return false }
+
+        let numberRegEx  = ".*[0-9]+.*"
+        let texttest1 = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+        guard texttest1.evaluate(with: password) else { return false }
+
+        let specialCharacterRegEx  = ".*[!&^%$#@()/_*+-]+.*"
+        let texttest2 = NSPredicate(format:"SELF MATCHES %@", specialCharacterRegEx)
+        guard texttest2.evaluate(with: password) else { return false }
+
+        return true
+    }
 
 }
