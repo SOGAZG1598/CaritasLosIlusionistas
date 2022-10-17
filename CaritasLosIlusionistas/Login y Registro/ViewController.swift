@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let emailusad = lbEmail.text!
         let loginExitoso = llamadaAPI_Login()
         
-        if emailusad.contains("@caritas.mx") && loginExitoso{
+        if emailusad.contains("@caritas.org.mx") && loginExitoso{
             self.performSegue(withIdentifier: "adminPrincipalSegue", sender: nil)
         }else if loginExitoso{
             self.performSegue(withIdentifier: "usuarioPrincipalSegue", sender: nil)

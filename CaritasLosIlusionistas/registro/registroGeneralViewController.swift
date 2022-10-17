@@ -42,7 +42,7 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
         
         let idUser = API_Registro()
         
-        if emailusad.contains("@caritas.mx") && idUser != -1{
+        if emailusad.contains("@caritas.org.mx") && idUser != -1{
             self.performSegue(withIdentifier: "adminRegistroSegue", sender: nil)
         }else if idUser != -1{
             self.performSegue(withIdentifier: "usuarioRegistroSegue", sender: nil)
@@ -55,7 +55,10 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
             
             if password.count < 8 || curp.count == 19{
                 alertas(titulo: "Aviso", texto: "Espacio con longitud no exacta")
-            }else{
+            }else if !validate(password:password){
+                alertas(titulo: "Aviso", texto: "La contraseña debe de tener cada uno de los 4 grupos: Mayúscula, minúscula, num3r0 y carácter  e$pecial!.")
+            }
+            else{
                 let passCrypt = encripta(password: "\(password).caritasPASS")
                 let crearUsuario: [String: Any] = ["nombreUsuarios": nombre, "apellidoPaterno": apellidoP, "apellidoMaterno": apellidoM, "curpUsuarios": curp, "emailUsuarios": emailusad,"telefonoUsuarios": telefono,"passUsuarios": passCrypt]
                 
@@ -149,5 +152,21 @@ class registroGeneralViewController: UIViewController, UITextFieldDelegate {
             //print(digest.hexStr) // B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDE9
             return digest.hexStr
         }
+    
+    //https://stackoverflow.com/a/42929273
+    func validate(password: String) -> Bool {
+        let capitalLetterRegEx  = ".*[A-Z]+.*"
+        let texttest = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
+        guard texttest.evaluate(with: password) else { return false }
 
+        let numberRegEx  = ".*[0-9]+.*"
+        let texttest1 = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+        guard texttest1.evaluate(with: password) else { return false }
+
+        let specialCharacterRegEx  = ".*[!&^%$#@()/_*+-]+.*"
+        let texttest2 = NSPredicate(format:"SELF MATCHES %@", specialCharacterRegEx)
+        guard texttest2.evaluate(with: password) else { return false }
+
+        return true
+    }
 }

@@ -83,7 +83,7 @@ class programasUsuarioTableViewController: UITableViewController{
         //Make cell look good
         
         
-        cell.programasView.layer.cornerRadius = cell.programasView.frame.height / 2
+        cell.programasView.layer.cornerRadius = cell.programasView.frame.height / 4
         cell.programasImgView.layer.cornerRadius = cell.programasImgView.frame.height / 2
         
         return cell
